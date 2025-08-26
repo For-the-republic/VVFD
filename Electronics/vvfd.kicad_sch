@@ -7,7 +7,7 @@
 	(title_block
 		(title "Generic VFD Driver Schematic")
 		(date "2025-08-26")
-		(rev "1.0.0")
+		(rev "1")
 		(company "ENEL200")
 		(comment 1 "LWQ")
 	)
