@@ -4652,7 +4652,7 @@
 	)
 	(text "High Current Sense"
 		(exclude_from_sim no)
-		(at 271.78 334.518 0)
+		(at 271.78 336.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4682,7 +4682,7 @@
 	)
 	(text "Low Current Sense"
 		(exclude_from_sim no)
-		(at 271.78 267.208 0)
+		(at 272.034 269.494 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7796,16 +7796,6 @@
 		)
 		(uuid "721b6e7f-c6c7-4c76-b379-b735c70385e8")
 	)
-	(label "LCS"
-		(at 269.24 270.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7bd0d2f8-d466-4907-bc6f-48bc4a9eddca")
-	)
 	(label "LCS_DRAIN"
 		(at 251.46 284.48 0)
 		(effects
@@ -7835,16 +7825,6 @@
 			(justify left bottom)
 		)
 		(uuid "a9ff28b4-d860-41bb-acda-3b7e60787470")
-	)
-	(label "HCS"
-		(at 269.24 337.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ba0c2f83-6af1-47a0-a218-e47d24c67427")
 	)
 	(label "HCS_GATE"
 		(at 233.68 358.14 0)
@@ -14982,7 +14962,7 @@
 			(uuid "9e51b127-0473-410b-bae3-255bc4d0a09d")
 		)
 		(instances
-			(project "vfd"
+			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
 					(reference "#FLG02")
 					(unit 1)
