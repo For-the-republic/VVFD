@@ -6,3 +6,5 @@ the VFD must use have a current going across the pixel pins and the grid pins. f
 
  **HOW THIS WORKS**
  it detects an increase in current across different pins, and will make a logic table accordingly. this is still in development so it might take a while to get up and running.
+
+![pic](/Electronics/PCBPic.png)

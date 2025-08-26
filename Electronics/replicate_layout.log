@@ -1,0 +1,193 @@
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 409:Plugin executed on: 'linux'
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 410:Plugin executed with python version: '3.13.7 (main, Aug 15 2025, 12:34:02) [GCC 15.2.1 20250813]'
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 411:KiCad build version: 9.0.3
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 412:Plugin version: 4.0.3
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 413:Frame repr: <wx._core.Frame object at 0x7ff55feac170>
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 437:Preparing replicator with U4 as a reference
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 485:source anchor footprint is 'U4'
+Located on: ['/VFD drive 1/']
+With filenames: ['vfd_drive.kicad_sch']
+With sheet_id:['/VFD drive 1/']
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 492:Corresponding footprints are 
+[('U6', ['/VFD drive 2/']), ('U10', ['/VFD drive 4/']), ('U8', ['/VFD drive 3/']), ('U4', ['/VFD drive 1/'])]
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 504:Showing dialog
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.replicate_layout 472:constructing a list of sheets suitable for replication on level:'/VFD drive 1/', file:'vfd_drive.kicad_sch'
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.replicate_layout 509:suitable sheets are:[['/VFD drive 2/'], ['/VFD drive 3/'], ['/VFD drive 4/']]
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1512:Level selected: ['/VFD drive 1/']
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1336:Filtering list of tracks
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 510:Toolbar position: wx.Point(3324, 128)
+08-25 21:30:30 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 515:Dialog position: wx.Point(2885, 128)
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 472:constructing a list of sheets suitable for replication on level:'/VFD drive 1/', file:'vfd_drive.kicad_sch'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 509:suitable sheets are:[['/VFD drive 2/'], ['/VFD drive 3/'], ['/VFD drive 4/']]
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 248:Replicating layout
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 288:Starting replication of sheets: [['/VFD drive 2/'], ['/VFD drive 3/'], ['/VFD drive 4/']]
+on level: ['/VFD drive 1/']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+08-25 21:30:32 root 340:updating GUI message: 'Preparing for replication'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 358:Getting the list of source footprints
+08-25 21:30:32 root 345:updating GUI with: 0
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 368:Getting the list of all the remaining footprints
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 375:Getting source tracks
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1336:Filtering list of tracks
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 379:Getting source zones
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 383:Getting source text items
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 387:Getting source drawing items
+08-25 21:30:32 root 340:updating GUI message: 'Replicating footprints'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 863:Replicating footprints
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 870:Replicating footprints on sheet ['/VFD drive 2/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'J7'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: 'EE3430D8-98F8-4AC2-8CA4-F22A3508DC77'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: 'EE3430D8-98F8-4AC2-8CA4-F22A3508DC77'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'J8'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:8f29db88-afaa-4142-a94e-9be0195f417b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:85eb3436-7b31-441b-860a-d5d180ad5464
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:25504f53-6aaf-42d5-a4ef-d970c5ef69e5
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:0b8c4344-0af4-419c-a14c-557896b78038
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:7b887078-0f3f-4cc0-ba06-e4f71122439b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:35f97ad5-2a66-45b8-9d26-eafbe1fc1b19
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'U3'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '054F3683-B3FE-449C-8258-1BFE59DAC132'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '054F3683-B3FE-449C-8258-1BFE59DAC132'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'U5'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:1e0b65eb-1f92-4b2f-9756-5f6a70c8dc44
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:a1d37f40-b884-448a-8b65-5e64e302eb60
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:19c16cfd-7a23-49ab-b2fd-544d5b3f109b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:4ff36a1f-c9b2-4892-87c2-0f1d672ddc95
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'U4'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'U6'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:8f3dda7e-d17f-4f95-9b46-2cdb24488d29
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:35d36f20-59cd-41a0-88b7-9b7bf9e50541
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:e9768f99-2673-445f-8e67-bc759564d5eb
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:dd008e2f-e46b-4a30-b0d0-565bf7279b48
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 870:Replicating footprints on sheet ['/VFD drive 3/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'J7'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: 'EE3430D8-98F8-4AC2-8CA4-F22A3508DC77'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: 'EE3430D8-98F8-4AC2-8CA4-F22A3508DC77'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'J9'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:8f29db88-afaa-4142-a94e-9be0195f417b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:397e112a-6de3-4722-83de-c826dd219940
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:25504f53-6aaf-42d5-a4ef-d970c5ef69e5
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:f8200a99-f227-4122-8644-74a8888b9a51
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:7b887078-0f3f-4cc0-ba06-e4f71122439b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:ad99f459-22db-490b-a720-de491393af4f
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'U3'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '054F3683-B3FE-449C-8258-1BFE59DAC132'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '054F3683-B3FE-449C-8258-1BFE59DAC132'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'U7'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:1e0b65eb-1f92-4b2f-9756-5f6a70c8dc44
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:7d6d7550-5d34-4dfd-8d70-e041c6a36e59
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:19c16cfd-7a23-49ab-b2fd-544d5b3f109b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:326c912a-03f6-4b3d-a757-3614ce920734
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'U4'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'U8'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:8f3dda7e-d17f-4f95-9b46-2cdb24488d29
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:f8a9b79c-6afe-44b7-8630-25b21570b058
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:e9768f99-2673-445f-8e67-bc759564d5eb
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:6b6fbe01-3a61-4b85-942d-110c7a12e69a
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 870:Replicating footprints on sheet ['/VFD drive 4/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'J7'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: 'EE3430D8-98F8-4AC2-8CA4-F22A3508DC77'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: 'EE3430D8-98F8-4AC2-8CA4-F22A3508DC77'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'J10'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:8f29db88-afaa-4142-a94e-9be0195f417b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:8fe61450-0e26-4912-ab77-a81a9ab18246
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:25504f53-6aaf-42d5-a4ef-d970c5ef69e5
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:a0996eec-1c45-4f68-b5f2-ca2df9b50aa8
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:7b887078-0f3f-4cc0-ba06-e4f71122439b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:e5a0f838-f721-44f5-a248-5657310eb052
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'U3'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '054F3683-B3FE-449C-8258-1BFE59DAC132'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '054F3683-B3FE-449C-8258-1BFE59DAC132'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'U9'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:1e0b65eb-1f92-4b2f-9756-5f6a70c8dc44
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:4ded18a3-a1e6-4b6e-af20-eda88966879e
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:19c16cfd-7a23-49ab-b2fd-544d5b3f109b
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:521379e4-7bda-4969-af69-55edb45f0904
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 888:Replicating footprint: 'U4'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 895:found match in dst footprint: 'U10'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:8f3dda7e-d17f-4f95-9b46-2cdb24488d29
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:731e81f9-a048-422b-a352-a196aa878a67
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 990:Src text UUid:e9768f99-2673-445f-8e67-bc759564d5eb
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 991:Dst text UUid:d1a17efe-0d60-41de-96d3-335c5178d0da
+08-25 21:30:32 root 340:updating GUI message: 'Replicating tracks'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1014:Replicating tracks
+08-25 21:30:32 root 345:updating GUI with: 0
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1020:Replicating tracks on sheet ['/VFD drive 2/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['MAIN_SER_IN'] and dst net: ['', 'SER_CHAIN1'], with src_net_depth=1, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.57
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['/VFD drive 2/'] :[('/VFD drive 1/B', '/VFD drive 2/B'), ('CLK', 'CLK'), ('/VFD drive 1/G', '/VFD drive 2/G'), ('GND', 'GND'), ('Net-(J7-Pin_4)', 'Net-(J8-Pin_4)'), ('Net-(J7-Pin_8)', 'Net-(J8-Pin_8)'), ('CLR', 'CLR'), ('/VFD drive 1/E', '/VFD drive 2/E'), ('/VFD drive 1/D', '/VFD drive 2/D'), ('VDC', 'VDC'), ('SYNC', 'SYNC'), ('Net-(J7-Pin_1)', 'Net-(J8-Pin_1)'), ('/VFD drive 1/H', '/VFD drive 2/H'), ('Net-(J7-Pin_2)', 'Net-(J8-Pin_2)'), ('/VFD drive 1/A', '/VFD drive 2/A'), ('Net-(J7-Pin_5)', 'Net-(J8-Pin_5)'), ('/VFD drive 1/C', '/VFD drive 2/C'), ('VCC', 'VCC'), ('/SER_CHAIN1', '/SER_CHAIN2'), ('/VFD drive 1/F', '/VFD drive 2/F'), ('Net-(J7-Pin_7)', 'Net-(J8-Pin_7)'), ('MAIN_SER_IN', '/SER_CHAIN1'), ('Net-(J7-Pin_6)', 'Net-(J8-Pin_6)'), ('Net-(J7-Pin_3)', 'Net-(J8-Pin_3)'), ('GNDA', 'GNDA')]
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1020:Replicating tracks on sheet ['/VFD drive 3/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['MAIN_SER_IN'] and dst net: ['', 'SER_CHAIN2'], with src_net_depth=1, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.57
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['/VFD drive 3/'] :[('CLK', 'CLK'), ('GND', 'GND'), ('/VFD drive 1/C', '/VFD drive 3/C'), ('CLR', 'CLR'), ('Net-(J7-Pin_2)', 'Net-(J9-Pin_2)'), ('/VFD drive 1/E', '/VFD drive 3/E'), ('VDC', 'VDC'), ('SYNC', 'SYNC'), ('/VFD drive 1/D', '/VFD drive 3/D'), ('/SER_CHAIN1', '/SER_CHAIN3'), ('Net-(J7-Pin_7)', 'Net-(J9-Pin_7)'), ('/VFD drive 1/F', '/VFD drive 3/F'), ('/VFD drive 1/B', '/VFD drive 3/B'), ('Net-(J7-Pin_3)', 'Net-(J9-Pin_3)'), ('Net-(J7-Pin_4)', 'Net-(J9-Pin_4)'), ('Net-(J7-Pin_1)', 'Net-(J9-Pin_1)'), ('MAIN_SER_IN', '/SER_CHAIN2'), ('/VFD drive 1/A', '/VFD drive 3/A'), ('Net-(J7-Pin_8)', 'Net-(J9-Pin_8)'), ('VCC', 'VCC'), ('/VFD drive 1/H', '/VFD drive 3/H'), ('Net-(J7-Pin_5)', 'Net-(J9-Pin_5)'), ('/VFD drive 1/G', '/VFD drive 3/G'), ('Net-(J7-Pin_6)', 'Net-(J9-Pin_6)'), ('GNDA', 'GNDA')]
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1020:Replicating tracks on sheet ['/VFD drive 4/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['MAIN_SER_IN'] and dst net: ['', 'SER_CHAIN3'], with src_net_depth=1, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.57
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'SER_CHAIN1'] and dst net: ['MAIN_SER_OUT'], with src_net_depth=2, dst_net_depth=1, src_fp_depth=1, dst_fp_depth=1, match level 0.36
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['/VFD drive 4/'] :[('/SER_CHAIN1', 'MAIN_SER_OUT'), ('CLK', 'CLK'), ('Net-(J7-Pin_5)', 'Net-(J10-Pin_5)'), ('GND', 'GND'), ('CLR', 'CLR'), ('VDC', 'VDC'), ('MAIN_SER_IN', '/SER_CHAIN3'), ('/VFD drive 1/C', '/VFD drive 4/C'), ('SYNC', 'SYNC'), ('Net-(J7-Pin_3)', 'Net-(J10-Pin_3)'), ('/VFD drive 1/H', '/VFD drive 4/H'), ('/VFD drive 1/G', '/VFD drive 4/G'), ('/VFD drive 1/A', '/VFD drive 4/A'), ('Net-(J7-Pin_1)', 'Net-(J10-Pin_1)'), ('Net-(J7-Pin_4)', 'Net-(J10-Pin_4)'), ('Net-(J7-Pin_8)', 'Net-(J10-Pin_8)'), ('VCC', 'VCC'), ('Net-(J7-Pin_7)', 'Net-(J10-Pin_7)'), ('Net-(J7-Pin_6)', 'Net-(J10-Pin_6)'), ('/VFD drive 1/D', '/VFD drive 4/D'), ('/VFD drive 1/B', '/VFD drive 4/B'), ('/VFD drive 1/E', '/VFD drive 4/E'), ('/VFD drive 1/F', '/VFD drive 4/F'), ('Net-(J7-Pin_2)', 'Net-(J10-Pin_2)'), ('GNDA', 'GNDA')]
+08-25 21:30:32 root 340:updating GUI message: 'Replicating zones'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1084:Replicating zones
+08-25 21:30:32 root 345:updating GUI with: 0
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1091:Replicating zones on sheet ['/VFD drive 2/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['MAIN_SER_IN'] and dst net: ['', 'SER_CHAIN1'], with src_net_depth=1, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.57
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['/VFD drive 2/'] :[('/VFD drive 1/B', '/VFD drive 2/B'), ('CLK', 'CLK'), ('/VFD drive 1/G', '/VFD drive 2/G'), ('GND', 'GND'), ('Net-(J7-Pin_4)', 'Net-(J8-Pin_4)'), ('Net-(J7-Pin_8)', 'Net-(J8-Pin_8)'), ('CLR', 'CLR'), ('/VFD drive 1/E', '/VFD drive 2/E'), ('/VFD drive 1/D', '/VFD drive 2/D'), ('VDC', 'VDC'), ('SYNC', 'SYNC'), ('Net-(J7-Pin_1)', 'Net-(J8-Pin_1)'), ('/VFD drive 1/H', '/VFD drive 2/H'), ('Net-(J7-Pin_2)', 'Net-(J8-Pin_2)'), ('/VFD drive 1/A', '/VFD drive 2/A'), ('Net-(J7-Pin_5)', 'Net-(J8-Pin_5)'), ('/VFD drive 1/C', '/VFD drive 2/C'), ('VCC', 'VCC'), ('/SER_CHAIN1', '/SER_CHAIN2'), ('/VFD drive 1/F', '/VFD drive 2/F'), ('Net-(J7-Pin_7)', 'Net-(J8-Pin_7)'), ('MAIN_SER_IN', '/SER_CHAIN1'), ('Net-(J7-Pin_6)', 'Net-(J8-Pin_6)'), ('Net-(J7-Pin_3)', 'Net-(J8-Pin_3)'), ('GNDA', 'GNDA')]
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1091:Replicating zones on sheet ['/VFD drive 3/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['MAIN_SER_IN'] and dst net: ['', 'SER_CHAIN2'], with src_net_depth=1, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.57
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['/VFD drive 3/'] :[('CLK', 'CLK'), ('GND', 'GND'), ('/VFD drive 1/C', '/VFD drive 3/C'), ('CLR', 'CLR'), ('Net-(J7-Pin_2)', 'Net-(J9-Pin_2)'), ('/VFD drive 1/E', '/VFD drive 3/E'), ('VDC', 'VDC'), ('SYNC', 'SYNC'), ('/VFD drive 1/D', '/VFD drive 3/D'), ('/SER_CHAIN1', '/SER_CHAIN3'), ('Net-(J7-Pin_7)', 'Net-(J9-Pin_7)'), ('/VFD drive 1/F', '/VFD drive 3/F'), ('/VFD drive 1/B', '/VFD drive 3/B'), ('Net-(J7-Pin_3)', 'Net-(J9-Pin_3)'), ('Net-(J7-Pin_4)', 'Net-(J9-Pin_4)'), ('Net-(J7-Pin_1)', 'Net-(J9-Pin_1)'), ('MAIN_SER_IN', '/SER_CHAIN2'), ('/VFD drive 1/A', '/VFD drive 3/A'), ('Net-(J7-Pin_8)', 'Net-(J9-Pin_8)'), ('VCC', 'VCC'), ('/VFD drive 1/H', '/VFD drive 3/H'), ('Net-(J7-Pin_5)', 'Net-(J9-Pin_5)'), ('/VFD drive 1/G', '/VFD drive 3/G'), ('Net-(J7-Pin_6)', 'Net-(J9-Pin_6)'), ('GNDA', 'GNDA')]
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1091:Replicating zones on sheet ['/VFD drive 4/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['MAIN_SER_IN'] and dst net: ['', 'SER_CHAIN3'], with src_net_depth=1, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.57
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'SER_CHAIN1'] and dst net: ['MAIN_SER_OUT'], with src_net_depth=2, dst_net_depth=1, src_fp_depth=1, dst_fp_depth=1, match level 0.36
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['/VFD drive 4/'] :[('/SER_CHAIN1', 'MAIN_SER_OUT'), ('CLK', 'CLK'), ('Net-(J7-Pin_5)', 'Net-(J10-Pin_5)'), ('GND', 'GND'), ('CLR', 'CLR'), ('VDC', 'VDC'), ('MAIN_SER_IN', '/SER_CHAIN3'), ('/VFD drive 1/C', '/VFD drive 4/C'), ('SYNC', 'SYNC'), ('Net-(J7-Pin_3)', 'Net-(J10-Pin_3)'), ('/VFD drive 1/H', '/VFD drive 4/H'), ('/VFD drive 1/G', '/VFD drive 4/G'), ('/VFD drive 1/A', '/VFD drive 4/A'), ('Net-(J7-Pin_1)', 'Net-(J10-Pin_1)'), ('Net-(J7-Pin_4)', 'Net-(J10-Pin_4)'), ('Net-(J7-Pin_8)', 'Net-(J10-Pin_8)'), ('VCC', 'VCC'), ('Net-(J7-Pin_7)', 'Net-(J10-Pin_7)'), ('Net-(J7-Pin_6)', 'Net-(J10-Pin_6)'), ('/VFD drive 1/D', '/VFD drive 4/D'), ('/VFD drive 1/B', '/VFD drive 4/B'), ('/VFD drive 1/E', '/VFD drive 4/E'), ('/VFD drive 1/F', '/VFD drive 4/F'), ('Net-(J7-Pin_2)', 'Net-(J10-Pin_2)'), ('GNDA', 'GNDA')]
+08-25 21:30:32 root 340:updating GUI message: 'Replicating text'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1173:Replicating text
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1180:Replicating text on sheet ['/VFD drive 2/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1180:Replicating text on sheet ['/VFD drive 3/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1180:Replicating text on sheet ['/VFD drive 4/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 root 340:updating GUI message: 'Replicating drawings'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1224:Replicating drawings
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1230:Replicating drawings on sheet ['/VFD drive 2/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1230:Replicating drawings on sheet ['/VFD drive 3/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1230:Replicating drawings on sheet ['/VFD drive 4/']
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Src fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 839:Dst fp.id: '3E4FAB86-4AFF-4D09-A620-32EA5C84F359'
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 264:Replication complete
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 267:Letting the user know there are some issues with replicated design
+08-25 21:30:32 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 271:Looks like the design has an exotic connectivity that the plugin might not handle properly
+ Make sure that you check the connectivity around:
+Footprint U9, pad 9
+Footprint U9, pad 14
+Footprint U7, pad 14
+Footprint U5, pad 14
+
