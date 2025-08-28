@@ -21,7 +21,7 @@ void shiftRegVFD::begin(uint8_t dataPin, uint8_t strobePin, uint8_t clockPin) {
     pinMode(_strobePin, OUTPUT);
 }
 void shiftRegVFD::outputList(uint8_t data[]) {
-     uint8_t temp[sizeof(data)];
+     uint8_t temp[sizeof(data)] = {0};
     for(int i=0; i<sizeof(data); i++) {
         //checks if the value is 1, OR if its a currently selected grid. else set to zero
         if(data[i]==1 || data[i]==2) {

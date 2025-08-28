@@ -31,7 +31,7 @@ AmmeterVFD ammeter;
 shiftRegVFD shiftReg;
 acGeneratorVFD acGen;
 
-// put function declarations here:
+// put function declarations here:le
 bool timing(unsigned long &timing, long &DELAY)
 {
   // if the Led is off, we must wait for the interval to expire before turning it on
