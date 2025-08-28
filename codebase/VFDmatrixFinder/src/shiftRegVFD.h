@@ -15,8 +15,12 @@ class shiftRegVFD {
     public:
 
     shiftRegVFD();
-    void begin(uint8_t dataPin, uint8_t strobePin, uint8_t clockPin);
+    void begin(uint8_t dataPin, uint8_t strobePin, uint8_t clockPin, size_t NO_OF_PINS);
     void outputList(uint8_t list[]);
+    void setMatrix(uint8_t *matrix, size_t row, size_t NO_OF_PINS);
+    void updateMatrix(uint8_t matrix[], size_t row);
+    void setDisplay(uint8_t matrix[], size_t row);
+    void outputMatrix(int row);
     uint8_t convertToGrid( uint8_t list[]);
 
     
@@ -24,6 +28,7 @@ class shiftRegVFD {
     uint8_t _dataPin;
     uint8_t _strobePin;
     uint8_t _clockPin;
+    uint8_t _internalMatrix[0][0];
 
 };
 #endif

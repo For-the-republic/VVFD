@@ -187,7 +187,7 @@ void setup()
   currentMillis = 0;
   ammeter.begin(A0, A1, A2, A3);
   ammeter.toHCS();
-  shiftReg.begin(12, 11, 13);
+  shiftReg.begin(12, 11, 13,NO_OF_PINS);
   acGen.begin(5, 6, AC_OR_DC);
   Serial.begin(9600);
   Serial.print("setup complete, going into base condition mode");
@@ -200,6 +200,13 @@ void loop()
   finalList[noOfGrids][NO_OF_PINS] = {0};
   convertMatrix();
   findSegments();
+  for(size_t i = 0; i < noOfGrids; i++){
+    for(size_t j = 0; j < NO_OF_PINS; j++) {
+      Serial.print(finalList[i][j]);
+      Serial.print(" ");
+    }
+    Serial.println();
+  }
   displayMatrix();
 }
 
