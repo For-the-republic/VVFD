@@ -35,3 +35,10 @@ to set the base conditions, the the arduino runs it will go into setup mode for 
 once this mode is done, just leave it. 
 ## when it has finished
 once it has completed making the pinout table, it will cycle through every valid combonation and send a matrix to the serial out of the arduino.
+
+
+## a note about pinouts
+**if in doubt, use the pinout schematic/PCB provided**
+- the AC generator pins must be both PWN pins
+- the ammeter pins must be analouge
+- all other pins should combos should be fine

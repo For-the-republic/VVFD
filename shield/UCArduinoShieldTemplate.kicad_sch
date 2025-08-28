@@ -3424,6 +3424,10 @@
 		(uuid "cf4f9014-78fb-422b-97a6-f8e7cfe91d65")
 	)
 	(no_connect
+		(at 266.7 53.34)
+		(uuid "d577eb57-c085-4bf6-8f38-18c0ac37046e")
+	)
+	(no_connect
 		(at 266.7 27.94)
 		(uuid "dc1220b1-f920-4085-b384-523ecd6aaaa6")
 	)
@@ -3438,10 +3442,6 @@
 	(no_connect
 		(at 229.87 40.64)
 		(uuid "e8bc4d57-bf97-482e-a49e-e90b282cd0d2")
-	)
-	(no_connect
-		(at 266.7 66.04)
-		(uuid "e9df8b03-6f39-4aee-909e-3790027f9cae")
 	)
 	(no_connect
 		(at 229.87 71.12)
@@ -4491,28 +4491,6 @@
 			)
 		)
 	)
-	(global_label "H2"
-		(shape output)
-		(at 266.7 55.88 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0f669d18-0e39-4ef9-9085-3269843363b1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 272.2252 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SYNC"
 		(shape input)
 		(at 35.56 101.6 180)
@@ -4557,6 +4535,28 @@
 			)
 		)
 	)
+	(global_label "indicator"
+		(shape output)
+		(at 266.7 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14f1a87d-e80b-49f7-a77a-9079aef67621")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 278.0913 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "5LCS"
 		(shape input)
 		(at 46.99 63.5 0)
@@ -4592,50 +4592,6 @@
 		(uuid "29889ec9-f58f-4c14-af51-431935003e3d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 274.7047 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "LCS_EN"
-		(shape output)
-		(at 266.7 60.96 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "393481f8-2943-4dbc-ac38-1a350e344b56")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 276.6399 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "indicator"
-		(shape output)
-		(at 266.7 63.5 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3df014ee-81be-4fea-9787-129744f1fa4d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 278.0913 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4777,9 +4733,9 @@
 			)
 		)
 	)
-	(global_label "HCS_EN"
+	(global_label "H2"
 		(shape output)
-		(at 266.7 58.42 0)
+		(at 266.7 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4787,9 +4743,9 @@
 			)
 			(justify left)
 		)
-		(uuid "79e4ff51-83e5-4fbd-8e20-4215bb31b3cf")
+		(uuid "7aa49e8f-a84b-4f7f-b5a3-a4f62d6f67b9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 276.9423 58.42 0)
+			(at 272.2252 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4887,6 +4843,28 @@
 			)
 		)
 	)
+	(global_label "H1"
+		(shape output)
+		(at 266.7 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "93aad171-0d2d-4d40-bcf4-21febb1b8b0c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 272.2252 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "BTWO"
 		(shape output)
 		(at 97.79 38.1 0)
@@ -4909,9 +4887,9 @@
 			)
 		)
 	)
-	(global_label "H1"
+	(global_label "LCS_EN"
 		(shape output)
-		(at 266.7 53.34 0)
+		(at 266.7 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4919,9 +4897,9 @@
 			)
 			(justify left)
 		)
-		(uuid "a7b93a93-083e-46f9-b12b-0baabbb6b126")
+		(uuid "aef43790-3798-44c4-af42-be9534de0903")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 272.2252 53.34 0)
+			(at 276.9423 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4966,6 +4944,28 @@
 		(uuid "ce32edbc-9d18-4205-b482-2314582115d2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 274.5838 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HCS_EN"
+		(shape output)
+		(at 266.7 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e9c09f8b-b550-433d-8b13-d09f7425cd54")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 276.6399 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
