@@ -6,8 +6,21 @@
 #include "ammeterVFD.h"
 #include "stdint.h"
 
+
+//base pin globals
 bool AC_OR_DC = true;     // true = AC, false = DC
 const int NO_OF_PINS = 8; // set this to the number of pins from the top right down
+const uint8_t DATA_PIN = 12;   // pin connected to the data pin of the shift register
+const uint8_t STROBE_PIN = 11; // pin connected to the strobe pin of the shift register
+const uint8_t CLOCK_PIN = 13;  // pin connected to the clock pin of the shift register
+const uint8_t HCSIN = A0;
+const uint8_t HCSEN = A1;
+const uint8_t LCSIN = A2;
+const uint8_t LCSEN = A3;
+//these two cannot be changed, if you do you have to modify the acGeneratorVFD library
+const uint8_t ACPINONE = 6; // pin connected to the ac generator one side
+const uint8_t ACPINTWO = 5; // pin connected to the ac generator other side
+
 
 // base values for the grid/segments
 float BASE_SEGMENT = NULL;
@@ -185,10 +198,10 @@ void displayMatrix()
 void setup()
 {
   currentMillis = 0;
-  ammeter.begin(A0, A1, A2, A3);
+  acGen.begin(ACPINONE, ACPINTWO, AC_OR_DC);
+  ammeter.begin(HCSIN, HCSEN, LCSIN, LCSEN);
   ammeter.toHCS();
-  shiftReg.begin(12, 11, 13,NO_OF_PINS);
-  acGen.begin(5, 6, AC_OR_DC);
+  shiftReg.begin(DATA_PIN, STROBE_PIN, CLOCK_PIN, NO_OF_PINS);
   Serial.begin(9600);
   Serial.print("setup complete, going into base condition mode");
 }
@@ -196,18 +209,18 @@ void setup()
 void loop()
 {
 
-  findGrids();
-  finalList[noOfGrids][NO_OF_PINS] = {0};
-  convertMatrix();
-  findSegments();
-  for(size_t i = 0; i < noOfGrids; i++){
-    for(size_t j = 0; j < NO_OF_PINS; j++) {
-      Serial.print(finalList[i][j]);
-      Serial.print(" ");
-    }
-    Serial.println();
-  }
-  displayMatrix();
+  // findGrids();
+  // finalList[noOfGrids][NO_OF_PINS] = {0};
+  // convertMatrix();
+  // findSegments();
+  // for(size_t i = 0; i < noOfGrids; i++){
+  //   for(size_t j = 0; j < NO_OF_PINS; j++) {
+  //     Serial.print(finalList[i][j]);
+  //     Serial.print(" ");
+  //   }
+  //   Serial.println();
+  // }
+  // displayMatrix();
 }
 
 // put function definitions here:
