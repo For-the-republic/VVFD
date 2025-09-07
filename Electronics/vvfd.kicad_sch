@@ -6,8 +6,8 @@
 	(paper "A1")
 	(title_block
 		(title "Generic VFD Driver Schematic")
-		(date "2025-09-04")
-		(rev "3")
+		(date "2025-09-08")
+		(rev "4")
 		(company "ENEL200")
 		(comment 1 "LWQ")
 	)
@@ -3685,7 +3685,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:IRF540N"
+		(symbol "Transistor_FET:DMG2301L"
 			(pin_names
 				(hide yes)
 			)
@@ -3701,7 +3701,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "IRF540N"
+			(property "Value" "DMG2301L"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -3710,7 +3710,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -3721,7 +3721,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf"
 				(at 5.08 -3.81 0)
 				(effects
 					(font
@@ -3731,7 +3731,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
+			(property "Description" "-3A Id, -20V Vds, P-Channel MOSFET, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3740,7 +3740,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "HEXFET N-Channel MOSFET"
+			(property "ki_keywords" "P-Channel MOSFET"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3749,7 +3749,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?220*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3758,7 +3758,306 @@
 					(hide yes)
 				)
 			)
-			(symbol "IRF540N_0_1"
+			(symbol "DMG2301L_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "DMG2301L_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Transistor_FET:DMN24H3D5L"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "DMN24H3D5L"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.diodes.com/assets/Datasheets/DMN24H3D5L.pdf"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.48A Id, 240V Vds, N-Channel MOSFET, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DMN24H3D5L_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -3902,7 +4201,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+						(xy 2.921 0.381) (xy 3.683 0.381)
 					)
 					(stroke
 						(width 0)
@@ -3925,7 +4224,7 @@
 					)
 				)
 			)
-			(symbol "IRF540N_1_1"
+			(symbol "DMN24H3D5L_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -3954,7 +4253,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3972,7 +4271,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4664,7 +4963,7 @@
 	)
 	(rectangle
 		(start 471.17 77.47)
-		(end 582.93 243.84)
+		(end 582.93 229.87)
 		(stroke
 			(width 0)
 			(type solid)
@@ -4807,8 +5106,8 @@
 		(uuid 9bcb3dac-edf2-418d-b868-63d24c152885)
 	)
 	(rectangle
-		(start 505.46 167.64)
-		(end 552.45 190.5)
+		(start 504.19 156.21)
+		(end 551.18 179.07)
 		(stroke
 			(width 0)
 			(type dash)
@@ -4843,8 +5142,8 @@
 		(uuid d8ddb5a9-01fc-4281-955a-567a259c7ba5)
 	)
 	(rectangle
-		(start 482.6 198.12)
-		(end 571.5 234.95)
+		(start 481.33 186.69)
+		(end 570.23 223.52)
 		(stroke
 			(width 0)
 			(type dash)
@@ -4958,17 +5257,6 @@
 			(justify left)
 		)
 		(uuid "38e0c44d-18eb-47e5-b1c5-84c0903b4c64")
-	)
-	(text "IRLU014PBF Digi with better specs\nRFD14N05L UC one"
-		(exclude_from_sim no)
-		(at 472.948 92.964 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "43ffb4f3-5b78-4d6f-8522-e5979380aa0f")
 	)
 	(text "5v pk low Current Sense"
 		(exclude_from_sim no)
@@ -5191,7 +5479,7 @@
 	)
 	(text "Current limiting and pulldown before MCU connection"
 		(exclude_from_sim no)
-		(at 508.508 196.596 0)
+		(at 507.238 185.166 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5209,9 +5497,9 @@
 		)
 		(uuid "d3171122-a9e5-4530-89e4-7d4e7b334274")
 	)
-	(text "H1 and H2 are used to turn on different H-bridge polarities\nThey should never be on at the same time, otherwise they will create a short circuit"
+	(text "H1 and H2 are used to turn on different H-bridge polarities"
 		(exclude_from_sim no)
-		(at 472.694 81.026 0)
+		(at 471.678 79.248 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5233,7 +5521,7 @@
 	)
 	(text "Output pin header to VFD filament pins"
 		(exclude_from_sim no)
-		(at 524.764 166.116 0)
+		(at 523.494 154.686 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5254,13 +5542,19 @@
 		(uuid "fae3808d-c7d4-43b3-a63e-e17e15fc1f06")
 	)
 	(junction
-		(at 508 129.54)
+		(at 506.73 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "00d52933-b483-4285-8bf7-07cbfbd74d19")
 	)
 	(junction
-		(at 556.26 208.28)
+		(at 528.32 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "03c0efc7-bcbb-413d-81bf-1e77ad8a0285")
+	)
+	(junction
+		(at 554.99 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "06b54bc6-e65c-4e69-bd7b-382902cac5f6")
@@ -5398,7 +5692,7 @@
 		(uuid "5d91d8cc-3fe2-430d-b967-ee8acc53d00e")
 	)
 	(junction
-		(at 552.45 129.54)
+		(at 551.18 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5fb37ba4-69f9-48ea-afd2-1e400720346a")
@@ -5440,7 +5734,7 @@
 		(uuid "9013a71e-2f55-4110-a78c-b8d1c1a08d5d")
 	)
 	(junction
-		(at 514.35 208.28)
+		(at 513.08 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "927543fe-d992-43e7-8b39-73bee4aed9e7")
@@ -5456,12 +5750,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "95c55b0b-d839-445f-93a9-172439570ee9")
-	)
-	(junction
-		(at 529.59 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9f7eed71-604e-4f3b-9e64-1474124e9be8")
 	)
 	(junction
 		(at 355.6 468.63)
@@ -5749,7 +6037,7 @@
 	)
 	(wire
 		(pts
-			(xy 542.29 143.51) (xy 544.83 143.51)
+			(xy 541.02 132.08) (xy 543.56 132.08)
 		)
 		(stroke
 			(width 0)
@@ -5826,16 +6114,6 @@
 			(type default)
 		)
 		(uuid "123fd08e-11eb-440c-a318-e58111e1704b")
-	)
-	(wire
-		(pts
-			(xy 529.59 101.6) (xy 529.59 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12e5fc81-7d54-4205-86c5-de9c5431f0b4")
 	)
 	(wire
 		(pts
@@ -5949,7 +6227,7 @@
 	)
 	(wire
 		(pts
-			(xy 552.45 119.38) (xy 552.45 129.54)
+			(xy 551.18 107.95) (xy 551.18 118.11)
 		)
 		(stroke
 			(width 0)
@@ -6029,7 +6307,7 @@
 	)
 	(wire
 		(pts
-			(xy 514.35 212.09) (xy 514.35 208.28)
+			(xy 513.08 200.66) (xy 513.08 196.85)
 		)
 		(stroke
 			(width 0)
@@ -6159,7 +6437,7 @@
 	)
 	(wire
 		(pts
-			(xy 547.37 129.54) (xy 552.45 129.54)
+			(xy 546.1 118.11) (xy 551.18 118.11)
 		)
 		(stroke
 			(width 0)
@@ -6199,7 +6477,7 @@
 	)
 	(wire
 		(pts
-			(xy 521.97 179.07) (xy 528.32 179.07)
+			(xy 520.7 167.64) (xy 527.05 167.64)
 		)
 		(stroke
 			(width 0)
@@ -6299,7 +6577,7 @@
 	)
 	(wire
 		(pts
-			(xy 556.26 212.09) (xy 556.26 208.28)
+			(xy 554.99 200.66) (xy 554.99 196.85)
 		)
 		(stroke
 			(width 0)
@@ -6469,7 +6747,7 @@
 	)
 	(wire
 		(pts
-			(xy 508 129.54) (xy 508 138.43)
+			(xy 506.73 118.11) (xy 506.73 127)
 		)
 		(stroke
 			(width 0)
@@ -6979,7 +7257,7 @@
 	)
 	(wire
 		(pts
-			(xy 552.45 148.59) (xy 552.45 152.4)
+			(xy 551.18 137.16) (xy 551.18 140.97)
 		)
 		(stroke
 			(width 0)
@@ -7059,6 +7337,16 @@
 	)
 	(wire
 		(pts
+			(xy 528.32 93.98) (xy 551.18 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f3e0056-cb1e-4f54-b5fb-e1cad7d501cb")
+	)
+	(wire
+		(pts
 			(xy 654.05 127) (xy 654.05 129.54)
 		)
 		(stroke
@@ -7109,7 +7397,7 @@
 	)
 	(wire
 		(pts
-			(xy 508 105.41) (xy 529.59 105.41)
+			(xy 506.73 93.98) (xy 528.32 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7249,7 +7537,7 @@
 	)
 	(wire
 		(pts
-			(xy 543.56 208.28) (xy 546.1 208.28)
+			(xy 542.29 196.85) (xy 544.83 196.85)
 		)
 		(stroke
 			(width 0)
@@ -7319,7 +7607,7 @@
 	)
 	(wire
 		(pts
-			(xy 508 105.41) (xy 508 109.22)
+			(xy 506.73 93.98) (xy 506.73 97.79)
 		)
 		(stroke
 			(width 0)
@@ -7329,7 +7617,7 @@
 	)
 	(wire
 		(pts
-			(xy 529.59 91.44) (xy 529.59 93.98)
+			(xy 528.32 91.44) (xy 528.32 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7369,7 +7657,7 @@
 	)
 	(wire
 		(pts
-			(xy 542.29 114.3) (xy 544.83 114.3)
+			(xy 541.02 102.87) (xy 543.56 102.87)
 		)
 		(stroke
 			(width 0)
@@ -7719,7 +8007,7 @@
 	)
 	(wire
 		(pts
-			(xy 497.84 114.3) (xy 500.38 114.3)
+			(xy 496.57 102.87) (xy 499.11 102.87)
 		)
 		(stroke
 			(width 0)
@@ -7799,7 +8087,7 @@
 	)
 	(wire
 		(pts
-			(xy 514.35 219.71) (xy 514.35 224.79)
+			(xy 513.08 208.28) (xy 513.08 213.36)
 		)
 		(stroke
 			(width 0)
@@ -7839,7 +8127,7 @@
 	)
 	(wire
 		(pts
-			(xy 508 148.59) (xy 508 152.4)
+			(xy 506.73 137.16) (xy 506.73 140.97)
 		)
 		(stroke
 			(width 0)
@@ -7859,7 +8147,7 @@
 	)
 	(wire
 		(pts
-			(xy 553.72 208.28) (xy 556.26 208.28)
+			(xy 552.45 196.85) (xy 554.99 196.85)
 		)
 		(stroke
 			(width 0)
@@ -7929,7 +8217,7 @@
 	)
 	(wire
 		(pts
-			(xy 514.35 208.28) (xy 516.89 208.28)
+			(xy 513.08 196.85) (xy 515.62 196.85)
 		)
 		(stroke
 			(width 0)
@@ -8089,7 +8377,7 @@
 	)
 	(wire
 		(pts
-			(xy 497.84 143.51) (xy 500.38 143.51)
+			(xy 496.57 132.08) (xy 499.11 132.08)
 		)
 		(stroke
 			(width 0)
@@ -8129,7 +8417,7 @@
 	)
 	(wire
 		(pts
-			(xy 552.45 129.54) (xy 552.45 138.43)
+			(xy 551.18 118.11) (xy 551.18 127)
 		)
 		(stroke
 			(width 0)
@@ -8139,7 +8427,7 @@
 	)
 	(wire
 		(pts
-			(xy 508 119.38) (xy 508 129.54)
+			(xy 506.73 107.95) (xy 506.73 118.11)
 		)
 		(stroke
 			(width 0)
@@ -8259,7 +8547,7 @@
 	)
 	(wire
 		(pts
-			(xy 521.97 176.53) (xy 528.32 176.53)
+			(xy 520.7 165.1) (xy 527.05 165.1)
 		)
 		(stroke
 			(width 0)
@@ -8369,7 +8657,7 @@
 	)
 	(wire
 		(pts
-			(xy 556.26 219.71) (xy 556.26 224.79)
+			(xy 554.99 208.28) (xy 554.99 213.36)
 		)
 		(stroke
 			(width 0)
@@ -8549,7 +8837,7 @@
 	)
 	(wire
 		(pts
-			(xy 556.26 208.28) (xy 558.8 208.28)
+			(xy 554.99 196.85) (xy 557.53 196.85)
 		)
 		(stroke
 			(width 0)
@@ -8559,7 +8847,7 @@
 	)
 	(wire
 		(pts
-			(xy 502.92 129.54) (xy 508 129.54)
+			(xy 501.65 118.11) (xy 506.73 118.11)
 		)
 		(stroke
 			(width 0)
@@ -8569,7 +8857,7 @@
 	)
 	(wire
 		(pts
-			(xy 501.65 208.28) (xy 504.19 208.28)
+			(xy 500.38 196.85) (xy 502.92 196.85)
 		)
 		(stroke
 			(width 0)
@@ -8589,17 +8877,7 @@
 	)
 	(wire
 		(pts
-			(xy 529.59 105.41) (xy 552.45 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f48ccff3-9546-4cac-be18-6741469babfb")
-	)
-	(wire
-		(pts
-			(xy 511.81 208.28) (xy 514.35 208.28)
+			(xy 510.54 196.85) (xy 513.08 196.85)
 		)
 		(stroke
 			(width 0)
@@ -8669,7 +8947,7 @@
 	)
 	(wire
 		(pts
-			(xy 552.45 105.41) (xy 552.45 109.22)
+			(xy 551.18 93.98) (xy 551.18 97.79)
 		)
 		(stroke
 			(width 0)
@@ -9515,16 +9793,6 @@
 		)
 		(uuid "be4b4f95-27e1-4be6-8f42-1b169c245d3e")
 	)
-	(label "H_BRIDGE_5V"
-		(at 529.59 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cff5245a-4e38-42e7-98e5-dd2451e777f5")
-	)
 	(label "DFB"
 		(at 303.53 453.39 0)
 		(effects
@@ -9567,7 +9835,7 @@
 	)
 	(global_label "BRIDGE_G2"
 		(shape input)
-		(at 543.56 208.28 180)
+		(at 542.29 196.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9577,7 +9845,7 @@
 		)
 		(uuid "0036b1d7-4a3f-4d5c-ac21-0afb0ef7ff99")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 530.2939 208.28 0)
+			(at 529.0239 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9609,9 +9877,9 @@
 			)
 		)
 	)
-	(global_label "BRIDGE_G2"
+	(global_label "BRIDGE_G1"
 		(shape output)
-		(at 542.29 143.51 180)
+		(at 541.02 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9621,7 +9889,7 @@
 		)
 		(uuid "06a9ba62-28ba-43c4-aef1-9c496b7f4b15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 529.0239 143.51 0)
+			(at 527.7539 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9677,7 +9945,7 @@
 	)
 	(global_label "FILAMENT_2"
 		(shape output)
-		(at 521.97 179.07 180)
+		(at 520.7 167.64 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9687,7 +9955,7 @@
 		)
 		(uuid "109d2a0c-5a7f-4765-bcef-8a98def07a4b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 508.0991 179.07 0)
+			(at 506.8291 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9721,7 +9989,7 @@
 	)
 	(global_label "BRIDGE_G1"
 		(shape input)
-		(at 501.65 208.28 180)
+		(at 500.38 196.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9731,7 +9999,7 @@
 		)
 		(uuid "1ba8d7a0-3ea2-4017-b6ad-f54e6c89ef4d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 488.3839 208.28 0)
+			(at 487.1139 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9939,9 +10207,9 @@
 			)
 		)
 	)
-	(global_label "BRIDGE_G1"
+	(global_label "BRIDGE_G2"
 		(shape output)
-		(at 497.84 143.51 180)
+		(at 496.57 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9951,7 +10219,7 @@
 		)
 		(uuid "3c666043-cb14-48c7-85da-703cc6d804bd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 484.5739 143.51 0)
+			(at 483.3039 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9963,7 +10231,7 @@
 	)
 	(global_label "FILAMENT_1"
 		(shape output)
-		(at 521.97 176.53 180)
+		(at 520.7 165.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9973,7 +10241,7 @@
 		)
 		(uuid "4e085445-5f4e-46a6-b293-fb8592745ee9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 508.0991 176.53 0)
+			(at 506.8291 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10007,7 +10275,7 @@
 	)
 	(global_label "FILAMENT_1"
 		(shape input)
-		(at 502.92 129.54 180)
+		(at 501.65 118.11 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10017,7 +10285,7 @@
 		)
 		(uuid "6073fcf5-088b-47ff-bb99-dc767a98c9df")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 489.0491 129.54 0)
+			(at 487.7791 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10183,7 +10451,7 @@
 	)
 	(global_label "FILAMENT_2"
 		(shape input)
-		(at 547.37 129.54 180)
+		(at 546.1 118.11 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10193,7 +10461,7 @@
 		)
 		(uuid "9283d2e2-238e-4a7b-8434-66c2816e54a7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 533.4991 129.54 0)
+			(at 532.2291 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10205,7 +10473,7 @@
 	)
 	(global_label "H1"
 		(shape output)
-		(at 516.89 208.28 0)
+		(at 515.62 196.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10215,7 +10483,7 @@
 		)
 		(uuid "97a57299-41b9-45aa-b479-495e4c5b26e1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 522.4152 208.28 0)
+			(at 521.1452 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10403,7 +10671,7 @@
 	)
 	(global_label "H2"
 		(shape output)
-		(at 558.8 208.28 0)
+		(at 557.53 196.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10413,7 +10681,7 @@
 		)
 		(uuid "dd4fd9bd-e1a1-4c6d-96ee-e9cce41e909a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 564.3252 208.28 0)
+			(at 563.0552 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10447,7 +10715,7 @@
 	)
 	(global_label "BRIDGE_G2"
 		(shape output)
-		(at 497.84 114.3 180)
+		(at 496.57 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10457,7 +10725,7 @@
 		)
 		(uuid "e48ea475-6659-4d01-b7ae-35955d095a03")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 484.5739 114.3 0)
+			(at 483.3039 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10601,7 +10869,7 @@
 	)
 	(global_label "BRIDGE_G1"
 		(shape output)
-		(at 542.29 114.3 180)
+		(at 541.02 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10611,7 +10879,7 @@
 		)
 		(uuid "faac009e-3757-4f58-b4e9-1c5b5f6135ea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 529.0239 114.3 0)
+			(at 527.7539 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10711,7 +10979,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 552.45 152.4 0)
+		(at 551.18 140.97 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10720,7 +10988,7 @@
 		(fields_autoplaced yes)
 		(uuid "02ab7143-7633-4844-bc6e-a60ae0c4f8a0")
 		(property "Reference" "#PWR030"
-			(at 552.45 158.75 0)
+			(at 551.18 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10729,7 +10997,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 552.45 157.48 0)
+			(at 551.18 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10737,7 +11005,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 552.45 152.4 0)
+			(at 551.18 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10746,7 +11014,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 552.45 152.4 0)
+			(at 551.18 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10755,7 +11023,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 552.45 152.4 0)
+			(at 551.18 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11040,7 +11308,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0cca86c9-2762-4c53-89e8-6d5a34df8dc8")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR08"
 			(at 603.25 102.87 0)
 			(effects
 				(font
@@ -11090,7 +11358,7 @@
 		(instances
 			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR09")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -11769,127 +12037,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IRF540N")
-		(at 549.91 114.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "25c645ee-ea31-4414-b630-b2ee6ed4b83c")
-		(property "Reference" "Q2"
-			(at 556.26 113.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRLU014PBF"
-			(at 556.26 115.5699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 554.99 116.205 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 554.99 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-channel power mosfet"
-			(at 549.91 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part No" "IRLU014PBF-ND"
-			(at 549.91 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part No" "IRLU014PBF"
-			(at 549.91 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Unit Price ($)" "1.39150"
-			(at 549.91 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Cascade Component" "0"
-			(at 549.91 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Master Component" "1"
-			(at 549.91 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7b61942e-d133-4f8f-8190-933b119110ee")
-		)
-		(pin "2"
-			(uuid "36b08252-67ef-4ebc-8ffd-1f30966f6bf3")
-		)
-		(pin "3"
-			(uuid "de040871-e7eb-44d7-9d79-f29e12b13648")
-		)
-		(instances
-			(project "vfd"
-				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 205.74 133.35 0)
 		(unit 1)
@@ -12138,7 +12285,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ae5a1d8-f045-4d89-95ec-f7326da8c4fe")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR04"
 			(at 697.23 96.52 0)
 			(effects
 				(font
@@ -12188,128 +12335,7 @@
 		(instances
 			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:IRF540N")
-		(at 267.97 468.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2b79cc4c-f3eb-4d91-bbcb-26b9ff97d3c7")
-		(property "Reference" "Q6"
-			(at 274.32 467.3599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRLU014PBF"
-			(at 274.32 469.8999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 273.05 470.535 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 273.05 472.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-channel power mosfet"
-			(at 267.97 468.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part No" "IRLU014PBF-ND"
-			(at 267.97 468.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part No" "IRLU014PBF"
-			(at 267.97 468.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Unit Price ($)" "1.39150"
-			(at 267.97 468.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Cascade Component" "0"
-			(at 267.97 468.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Master Component" "1"
-			(at 267.97 468.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "66abd8bd-a0dd-4c33-b399-0ab40aa4dcd5")
-		)
-		(pin "2"
-			(uuid "0e45ecaa-cc88-40f3-bab3-03339907c68a")
-		)
-		(pin "3"
-			(uuid "2b8d4f74-5a96-40a5-9173-55343fbf2ab6")
-		)
-		(instances
-			(project "vfd"
-				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "Q6")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -12317,7 +12343,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 533.4 179.07 180)
+		(at 532.13 167.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12326,7 +12352,7 @@
 		(fields_autoplaced yes)
 		(uuid "2db79f92-6fa9-4428-989a-24f92efa56f5")
 		(property "Reference" "J2"
-			(at 534.67 176.5299 0)
+			(at 533.4 165.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12335,7 +12361,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 534.67 179.0699 0)
+			(at 533.4 167.6399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12344,7 +12370,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 533.4 179.07 0)
+			(at 532.13 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12353,7 +12379,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 533.4 179.07 0)
+			(at 532.13 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12362,7 +12388,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 533.4 179.07 0)
+			(at 532.13 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12371,7 +12397,7 @@
 			)
 		)
 		(property "Digikey Part No" "UC"
-			(at 533.4 179.07 0)
+			(at 532.13 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12380,7 +12406,7 @@
 			)
 		)
 		(property "Unit Price ($)" "0.00"
-			(at 533.4 179.07 0)
+			(at 532.13 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12389,7 +12415,7 @@
 			)
 		)
 		(property "Cascade Component" "0"
-			(at 533.4 179.07 0)
+			(at 532.13 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12398,7 +12424,7 @@
 			)
 		)
 		(property "Master Component" "1"
-			(at 533.4 179.07 0)
+			(at 532.13 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12660,122 +12686,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Polyfuse")
-		(at 529.59 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "32bee2d2-b225-46b2-9e5f-a6fe15fd9c89")
-		(property "Reference" "F2"
-			(at 532.13 96.5199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "500mA hold"
-			(at 532.13 99.0599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Fuse:Fuse_Littelfuse_395Series"
-			(at 530.86 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 529.59 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
-			(at 529.59 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part No" "RXEF050"
-			(at 529.59 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part No" "UC"
-			(at 529.59 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Unit Price ($)" "1.20"
-			(at 529.59 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Cascade Component" "0"
-			(at 529.59 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Master Component" "1"
-			(at 529.59 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e140f88c-cebf-4ed6-b7c1-3319f3021724")
-		)
-		(pin "1"
-			(uuid "74972809-c20e-44ca-9f52-9a15a88b4f53")
-		)
-		(instances
-			(project "vfd"
-				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "F2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 209.55 95.25 0)
 		(unit 1)
@@ -12785,7 +12695,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3421abba-067f-4b0e-8b65-668bb22d1a04")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR06"
 			(at 209.55 99.06 0)
 			(effects
 				(font
@@ -12835,7 +12745,7 @@
 		(instances
 			(project "vfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR07")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -13463,7 +13373,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f090ef5-65ec-47af-b2eb-aeddc09dd284")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR09"
 			(at 638.81 106.68 0)
 			(effects
 				(font
@@ -13513,7 +13423,7 @@
 		(instances
 			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR010")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -13717,7 +13627,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 508 208.28 90)
+		(at 506.73 196.85 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13726,7 +13636,7 @@
 		(fields_autoplaced yes)
 		(uuid "448e4bca-9e6f-49f6-bb68-1b782f7b862a")
 		(property "Reference" "R11"
-			(at 508 201.93 90)
+			(at 506.73 190.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13734,15 +13644,15 @@
 			)
 		)
 		(property "Value" "2K2"
-			(at 508 204.47 90)
+			(at 506.73 193.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
-			(at 508 210.058 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 506.73 198.628 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13751,7 +13661,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 508 208.28 0)
+			(at 506.73 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13760,7 +13670,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 508 208.28 0)
+			(at 506.73 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13769,7 +13679,7 @@
 			)
 		)
 		(property "Digikey Part No" "UC"
-			(at 508 208.28 90)
+			(at 506.73 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13778,7 +13688,7 @@
 			)
 		)
 		(property "Unit Price ($)" "0.00"
-			(at 508 208.28 90)
+			(at 506.73 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13787,7 +13697,7 @@
 			)
 		)
 		(property "Cascade Component" "0"
-			(at 508 208.28 90)
+			(at 506.73 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13796,7 +13706,7 @@
 			)
 		)
 		(property "Master Component" "1"
-			(at 508 208.28 90)
+			(at 506.73 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13829,7 +13739,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "452f4a1f-7071-46a1-86f9-2457afc90f8d")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR05"
 			(at 716.28 96.52 0)
 			(effects
 				(font
@@ -13879,24 +13789,24 @@
 		(instances
 			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR06")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IRF540N")
-		(at 505.46 114.3 0)
+		(lib_id "Transistor_FET:DMN24H3D5L")
+		(at 504.19 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "46f4ca11-cf52-4e08-8594-ca91a2f5aadb")
-		(property "Reference" "Q1"
-			(at 511.81 113.0299 0)
+		(uuid "453b5084-5a9d-40d6-abcc-903b0290302d")
+		(property "Reference" "Q3"
+			(at 510.54 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13904,8 +13814,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRLU014PBF"
-			(at 511.81 115.5699 0)
+		(property "Value" "SL3402"
+			(at 510.54 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13913,8 +13823,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 510.54 116.205 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 509.27 133.985 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13924,8 +13834,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 510.54 118.11 0)
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7181/SL3402%20SOT-23.PDF"
+			(at 509.27 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13934,35 +13844,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "N-channel power mosfet"
-			(at 505.46 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part No" "IRLU014PBF-ND"
-			(at 505.46 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part No" "IRLU014PBF"
-			(at 505.46 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Unit Price ($)" "1.39150"
-			(at 505.46 114.3 0)
+		(property "Description" "4A Id, 30V Vds, N-Channel MOSFET, SOT-23"
+			(at 504.19 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13971,7 +13854,25 @@
 			)
 		)
 		(property "Cascade Component" "0"
-			(at 505.46 114.3 0)
+			(at 504.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part No" "5399-SL3402CT-ND"
+			(at 504.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part No" "  SL3402"
+			(at 504.19 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13980,7 +13881,7 @@
 			)
 		)
 		(property "Master Component" "1"
-			(at 505.46 114.3 0)
+			(at 504.19 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13988,19 +13889,28 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "d95383d2-b310-4ab7-9bd7-2a11bb5efa71")
+		(property "Unit Price ($)" "0.33350"
+			(at 504.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "2"
-			(uuid "14a3639d-6f45-4522-8567-59dedc50413a")
+			(uuid "5c253de0-f6dd-4e0a-b4e4-e348c32e42b6")
+		)
+		(pin "1"
+			(uuid "8497bbb7-41eb-4718-90f4-48f7db01b943")
 		)
 		(pin "3"
-			(uuid "a185bfc2-f4c4-40ee-bd54-ba5809052e2c")
+			(uuid "5bb0776f-35c7-457b-9c57-5e0003ca16e5")
 		)
 		(instances
-			(project ""
+			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "Q1")
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -15066,127 +14976,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IRF540N")
-		(at 505.46 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "536a24e4-79b5-42e6-81ac-f97b584a2700")
-		(property "Reference" "Q3"
-			(at 511.81 142.2399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRLU014PBF"
-			(at 511.81 144.7799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 510.54 145.415 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 510.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-channel power mosfet"
-			(at 505.46 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part No" "IRLU014PBF-ND"
-			(at 505.46 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part No" "IRLU014PBF"
-			(at 505.46 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Unit Price ($)" "1.39150"
-			(at 505.46 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Cascade Component" "0"
-			(at 505.46 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Master Component" "1"
-			(at 505.46 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "85aab6c5-c0ea-45eb-b618-cb1c5a3c95f3")
-		)
-		(pin "2"
-			(uuid "a9d2be90-49f6-4538-bd4e-81287216f827")
-		)
-		(pin "3"
-			(uuid "28b54e6f-ec47-4627-a794-61c898e26b4d")
-		)
-		(instances
-			(project "vfd"
-				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDA")
 		(at 270.51 444.5 180)
 		(unit 1)
@@ -15896,7 +15685,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 514.35 224.79 0)
+		(at 513.08 213.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15905,7 +15694,7 @@
 		(fields_autoplaced yes)
 		(uuid "5bdae8fc-169b-4fe0-b0b6-e478bb2ab411")
 		(property "Reference" "#PWR032"
-			(at 514.35 231.14 0)
+			(at 513.08 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15914,7 +15703,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 514.35 229.87 0)
+			(at 513.08 218.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15922,7 +15711,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 514.35 224.79 0)
+			(at 513.08 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15931,7 +15720,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 514.35 224.79 0)
+			(at 513.08 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15940,7 +15729,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 514.35 224.79 0)
+			(at 513.08 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16417,17 +16206,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IRF540N")
-		(at 267.97 401.32 0)
+		(lib_id "Transistor_FET:DMN24H3D5L")
+		(at 548.64 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "69b071eb-284c-4c92-b0b1-85c46e17f3ea")
-		(property "Reference" "Q5"
-			(at 274.32 400.0499 0)
+		(uuid "6542c1bb-8eff-4ac9-88a5-c2cc78b192d7")
+		(property "Reference" "Q4"
+			(at 554.99 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16435,8 +16224,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRLU014PBF"
-			(at 274.32 402.5899 0)
+		(property "Value" "SL3402"
+			(at 554.99 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16444,8 +16233,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 273.05 403.225 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 553.72 133.985 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16455,8 +16244,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 273.05 405.13 0)
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7181/SL3402%20SOT-23.PDF"
+			(at 553.72 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16465,35 +16254,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "N-channel power mosfet"
-			(at 267.97 401.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part No" "IRLU014PBF-ND"
-			(at 267.97 401.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part No" "IRLU014PBF"
-			(at 267.97 401.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Unit Price ($)" "1.39150"
-			(at 267.97 401.32 0)
+		(property "Description" "4A Id, 30V Vds, N-Channel MOSFET, SOT-23"
+			(at 548.64 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16502,7 +16264,25 @@
 			)
 		)
 		(property "Cascade Component" "0"
-			(at 267.97 401.32 0)
+			(at 548.64 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part No" "5399-SL3402CT-ND"
+			(at 548.64 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part No" "  SL3402"
+			(at 548.64 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16511,7 +16291,7 @@
 			)
 		)
 		(property "Master Component" "1"
-			(at 267.97 401.32 0)
+			(at 548.64 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16519,19 +16299,28 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "4bd4a223-10df-4bb2-86a3-2bd8b9445238")
+		(property "Unit Price ($)" "0.33350"
+			(at 548.64 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "2"
-			(uuid "bb44d2e3-0269-4dcd-81bd-27a5b71c2d68")
+			(uuid "eb50d1bd-9d37-45fa-902e-6d1c4784b7ab")
+		)
+		(pin "1"
+			(uuid "12a2b575-bcf1-429f-865a-44a5bc1d849a")
 		)
 		(pin "3"
-			(uuid "97278cfa-b981-42a3-a81d-f3c17e74649d")
+			(uuid "2c0db759-3271-4d6d-8c45-09dd9dcbe9c2")
 		)
 		(instances
-			(project "vfd"
+			(project ""
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "Q5")
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -16874,7 +16663,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 556.26 215.9 0)
+		(at 554.99 204.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16883,7 +16672,7 @@
 		(fields_autoplaced yes)
 		(uuid "6cffdd25-ba87-464e-ae4e-b79dbbf0d976")
 		(property "Reference" "R14"
-			(at 558.8 214.6299 0)
+			(at 557.53 203.1999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16892,7 +16681,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 558.8 217.1699 0)
+			(at 557.53 205.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16900,8 +16689,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
-			(at 554.482 215.9 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 553.212 204.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16910,7 +16699,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 556.26 215.9 0)
+			(at 554.99 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16919,7 +16708,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 556.26 215.9 0)
+			(at 554.99 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16928,7 +16717,7 @@
 			)
 		)
 		(property "Digikey Part No" "UC"
-			(at 556.26 215.9 0)
+			(at 554.99 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16937,7 +16726,7 @@
 			)
 		)
 		(property "Unit Price ($)" "0.00"
-			(at 556.26 215.9 0)
+			(at 554.99 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16946,7 +16735,7 @@
 			)
 		)
 		(property "Cascade Component" "0"
-			(at 556.26 215.9 0)
+			(at 554.99 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16955,7 +16744,7 @@
 			)
 		)
 		(property "Master Component" "1"
-			(at 556.26 215.9 0)
+			(at 554.99 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17753,7 +17542,7 @@
 				(hide yes)
 			)
 		)
-		(property "Cascade Component" "1"
+		(property "Cascade Component" "0"
 			(at 134.62 466.09 0)
 			(effects
 				(font
@@ -17762,7 +17551,7 @@
 				(hide yes)
 			)
 		)
-		(property "Master Component" "0"
+		(property "Master Component" "1"
 			(at 134.62 466.09 0)
 			(effects
 				(font
@@ -18842,127 +18631,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IRF540N")
-		(at 549.91 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8898137c-0a70-4482-b38d-58b0534e39a4")
-		(property "Reference" "Q4"
-			(at 556.26 142.2399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRLU014PBF"
-			(at 556.26 144.7799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 554.99 145.415 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 554.99 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-channel power mosfet"
-			(at 549.91 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part No" "IRLU014PBF-ND"
-			(at 549.91 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part No" "IRLU014PBF"
-			(at 549.91 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Unit Price ($)" "1.39150"
-			(at 549.91 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Cascade Component" "0"
-			(at 549.91 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Master Component" "1"
-			(at 549.91 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7b1185e5-5ef0-4f34-b988-f4580fadd933")
-		)
-		(pin "2"
-			(uuid "a479b286-3995-4667-b917-a148f8750a04")
-		)
-		(pin "3"
-			(uuid "b33548eb-aeb2-4424-b718-60e5ec1691f6")
-		)
-		(instances
-			(project "vfd"
-				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 162.56 99.06 0)
 		(unit 1)
@@ -18972,7 +18640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "893c1f2c-2481-4c20-bdf2-34b3cdca28ab")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR07"
 			(at 162.56 102.87 0)
 			(effects
 				(font
@@ -19022,7 +18690,7 @@
 		(instances
 			(project "vfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR08")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -19901,7 +19569,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 514.35 215.9 0)
+		(at 513.08 204.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19910,7 +19578,7 @@
 		(fields_autoplaced yes)
 		(uuid "9e119d13-21a9-4e51-9400-0b9309f13a69")
 		(property "Reference" "R13"
-			(at 516.89 214.6299 0)
+			(at 515.62 203.1999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19919,7 +19587,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 516.89 217.1699 0)
+			(at 515.62 205.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19927,8 +19595,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
-			(at 512.572 215.9 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 511.302 204.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19937,7 +19605,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 514.35 215.9 0)
+			(at 513.08 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19946,7 +19614,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 514.35 215.9 0)
+			(at 513.08 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19955,7 +19623,7 @@
 			)
 		)
 		(property "Digikey Part No" "UC"
-			(at 514.35 215.9 0)
+			(at 513.08 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19964,7 +19632,7 @@
 			)
 		)
 		(property "Unit Price ($)" "0.00"
-			(at 514.35 215.9 0)
+			(at 513.08 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19973,7 +19641,7 @@
 			)
 		)
 		(property "Cascade Component" "0"
-			(at 514.35 215.9 0)
+			(at 513.08 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19982,7 +19650,7 @@
 			)
 		)
 		(property "Master Component" "1"
-			(at 514.35 215.9 0)
+			(at 513.08 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20706,7 +20374,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 508 152.4 0)
+		(at 506.73 140.97 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20715,7 +20383,7 @@
 		(fields_autoplaced yes)
 		(uuid "a80c6518-2a1d-472d-8ffd-8e5c6b799a29")
 		(property "Reference" "#PWR029"
-			(at 508 158.75 0)
+			(at 506.73 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20724,7 +20392,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 508 157.48 0)
+			(at 506.73 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20732,7 +20400,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 508 152.4 0)
+			(at 506.73 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20741,7 +20409,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 508 152.4 0)
+			(at 506.73 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20750,7 +20418,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 508 152.4 0)
+			(at 506.73 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21035,6 +20703,127 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:DMG2301L")
+		(at 504.19 102.87 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ac6abcd8-76a5-4a56-b64d-2bdcde886b0d")
+		(property "Reference" "Q1"
+			(at 510.54 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMG2305UX"
+			(at 510.54 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 509.27 100.965 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf"
+			(at 509.27 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "-4.2A Id, -20V Vds, P-Channel MOSFET, SOT-23"
+			(at 504.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Cascade Component" "0"
+			(at 504.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part No" "DMG2305UX-7DICT-ND"
+			(at 504.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part No" "DMG2305UX-7"
+			(at 504.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Master Component" "1"
+			(at 504.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Unit Price ($)" "0.33350"
+			(at 504.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0cb4f175-cf4c-45da-8ed6-451ca06f0e5b")
+		)
+		(pin "3"
+			(uuid "dcf208a2-4278-40c6-8bb6-5b32976faa72")
+		)
+		(pin "2"
+			(uuid "17e4e5e8-a27e-482b-b6e2-ca77b0e48551")
+		)
+		(instances
+			(project "vvfd"
+				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 270.51 485.14 0)
 		(unit 1)
@@ -21162,6 +20951,127 @@
 			(project "vfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
 					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN24H3D5L")
+		(at 267.97 401.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1aec95b-bf0d-4974-a090-be8522dba7af")
+		(property "Reference" "Q5"
+			(at 274.32 400.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SL3402"
+			(at 274.32 402.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 273.05 403.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7181/SL3402%20SOT-23.PDF"
+			(at 273.05 405.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "4A Id, 30V Vds, N-Channel MOSFET, SOT-23"
+			(at 267.97 401.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Cascade Component" "0"
+			(at 267.97 401.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part No" "5399-SL3402CT-ND"
+			(at 267.97 401.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part No" "  SL3402"
+			(at 267.97 401.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Master Component" "1"
+			(at 267.97 401.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Unit Price ($)" "0.33350"
+			(at 267.97 401.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0c3c8b74-32a6-4e8c-a3f3-9d79e084fa30")
+		)
+		(pin "1"
+			(uuid "ed2c7009-1fd8-4338-bb8f-535a81f6b038")
+		)
+		(pin "3"
+			(uuid "abb88382-a741-454e-901b-9bd8470cfa60")
+		)
+		(instances
+			(project "vvfd"
+				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -21585,7 +21495,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 529.59 91.44 0)
+		(at 528.32 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21593,8 +21503,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0dd13f7-96ea-47cf-8f03-3413f0d7b468")
-		(property "Reference" "#PWR03"
-			(at 529.59 95.25 0)
+		(property "Reference" "#PWR010"
+			(at 528.32 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21603,7 +21513,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 529.59 87.63 0)
+			(at 528.32 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21611,7 +21521,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 529.59 91.44 0)
+			(at 528.32 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21620,7 +21530,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 529.59 91.44 0)
+			(at 528.32 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21629,7 +21539,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 529.59 91.44 0)
+			(at 528.32 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21643,7 +21553,128 @@
 		(instances
 			(project "vfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR03")
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN24H3D5L")
+		(at 267.97 468.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c12afb60-870e-4a4e-9a0e-eb11fb6f9b8c")
+		(property "Reference" "Q6"
+			(at 274.32 467.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SL3402"
+			(at 274.32 469.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 273.05 470.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7181/SL3402%20SOT-23.PDF"
+			(at 273.05 472.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "4A Id, 30V Vds, N-Channel MOSFET, SOT-23"
+			(at 267.97 468.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Cascade Component" "0"
+			(at 267.97 468.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part No" "5399-SL3402CT-ND"
+			(at 267.97 468.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part No" "  SL3402"
+			(at 267.97 468.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Master Component" "1"
+			(at 267.97 468.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Unit Price ($)" "0.33350"
+			(at 267.97 468.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5bab5d7e-8c71-49ba-b520-20cbf157fbef")
+		)
+		(pin "1"
+			(uuid "22fc3a51-ba9f-4b44-a320-8001d4dfe662")
+		)
+		(pin "3"
+			(uuid "42d070fe-d8e4-4732-b35a-e6631c6e61ea")
+		)
+		(instances
+			(project "vvfd"
+				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -21957,6 +21988,127 @@
 			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMG2301L")
+		(at 548.64 102.87 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d485a09b-2123-42e3-9c1c-b3bf7020ef69")
+		(property "Reference" "Q2"
+			(at 554.99 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMG2305UX"
+			(at 554.99 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 553.72 100.965 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf"
+			(at 553.72 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "-4.2A Id, -20V Vds, P-Channel MOSFET, SOT-23"
+			(at 548.64 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Cascade Component" "0"
+			(at 548.64 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part No" "DMG2305UX-7DICT-ND"
+			(at 548.64 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part No" "DMG2305UX-7"
+			(at 548.64 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Master Component" "1"
+			(at 548.64 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Unit Price ($)" "0.33350"
+			(at 548.64 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a8004644-c911-4af1-b731-08ae6d4af9b4")
+		)
+		(pin "3"
+			(uuid "0ba28df1-a31d-4624-91b0-25e8156f52ec")
+		)
+		(pin "2"
+			(uuid "a8f96270-cada-4d0e-b22a-b5e12b25b55c")
+		)
+		(instances
+			(project "vvfd"
+				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -22422,7 +22574,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 556.26 224.79 0)
+		(at 554.99 213.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22431,7 +22583,7 @@
 		(fields_autoplaced yes)
 		(uuid "dd2832f9-525e-4506-a654-23963a53b368")
 		(property "Reference" "#PWR033"
-			(at 556.26 231.14 0)
+			(at 554.99 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22440,7 +22592,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 556.26 229.87 0)
+			(at 554.99 218.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22448,7 +22600,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 556.26 224.79 0)
+			(at 554.99 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22457,7 +22609,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 556.26 224.79 0)
+			(at 554.99 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22466,7 +22618,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 556.26 224.79 0)
+			(at 554.99 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22708,7 +22860,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ddf8d58f-8e1a-4ead-a535-50c77f6d686b")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR03"
 			(at 676.91 96.52 0)
 			(effects
 				(font
@@ -22758,7 +22910,7 @@
 		(instances
 			(project "vvfd"
 				(path "/36e0811c-69c7-4576-98bb-165d7651c83d"
-					(reference "#PWR04")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -23865,7 +24017,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 549.91 208.28 90)
+		(at 548.64 196.85 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23874,7 +24026,7 @@
 		(fields_autoplaced yes)
 		(uuid "fa30bf90-190d-4d8f-b9ff-e6466c253c7e")
 		(property "Reference" "R12"
-			(at 549.91 201.93 90)
+			(at 548.64 190.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23882,15 +24034,15 @@
 			)
 		)
 		(property "Value" "2K2"
-			(at 549.91 204.47 90)
+			(at 548.64 193.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
-			(at 549.91 210.058 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 548.64 198.628 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23899,7 +24051,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 549.91 208.28 0)
+			(at 548.64 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23908,7 +24060,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 549.91 208.28 0)
+			(at 548.64 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23917,7 +24069,7 @@
 			)
 		)
 		(property "Digikey Part No" "UC"
-			(at 549.91 208.28 90)
+			(at 548.64 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23926,7 +24078,7 @@
 			)
 		)
 		(property "Unit Price ($)" "0.00"
-			(at 549.91 208.28 90)
+			(at 548.64 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23935,7 +24087,7 @@
 			)
 		)
 		(property "Cascade Component" "0"
-			(at 549.91 208.28 90)
+			(at 548.64 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23944,7 +24096,7 @@
 			)
 		)
 		(property "Master Component" "1"
-			(at 549.91 208.28 90)
+			(at 548.64 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
