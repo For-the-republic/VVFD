@@ -2,7 +2,7 @@
 "C1,C3,C8,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20","13","100n","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","0","UC","","0.20"
 "C2","1","100u","Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm","1","732-9051-1-ND","860080674009","0.72450"
 "C4","1","1n","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","1","UC","","0.20"
-"C5,C10","2","220n","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","1","UC","","0.20"
+"C5,C10","2","220n","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","1","UC","","0.40"
 "C6,C7","2","10n","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","1","UC","","0.20"
 "C9","1","330p","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","1","UC","","0.20"
 "D1","1","SB240L","Diode_THT:D_DO-15_P3.81mm_Vertical_KathodeUp","1","UC","SB240L","0.80"
