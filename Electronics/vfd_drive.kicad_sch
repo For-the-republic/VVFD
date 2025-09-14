@@ -3560,7 +3560,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Custom:SOP-18_7.495x11.515mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOP-18_7x12.5mm_P1.27mm"
 			(at 128.27 44.45 0)
 			(effects
 				(font
@@ -3587,7 +3587,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey Part No" "TBD62783AFWGELCT-ND"
+		(property "Digikey Part No" "TBD62783AFGELCT-ND"
 			(at 128.27 58.42 0)
 			(effects
 				(font
@@ -3596,7 +3596,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part No" "TBD62783AFWG,EL"
+		(property "Manufacturer Part No" "TBD62783AFG,EL"
 			(at 128.27 58.42 0)
 			(effects
 				(font
@@ -3605,7 +3605,7 @@
 				(hide yes)
 			)
 		)
-		(property "Unit Price ($)" "3.36950"
+		(property "Unit Price ($)" "4.87600"
 			(at 128.27 58.42 0)
 			(effects
 				(font
