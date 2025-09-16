@@ -462,7 +462,6 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
-      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -665,7 +664,7 @@
           "group_by": false,
           "label": "Cascade Component",
           "name": "Cascade Component",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
