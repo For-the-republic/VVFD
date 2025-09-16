@@ -3,20 +3,19 @@
  made by Sam Ramsay and Luke Quigley
 # PREREQUISTES
 
-## It must be an "E" type VFD
+## It must have a leakage current
+VFDs are funny little things, as even though the have vacumn in the name, most are not a pure vacumn. instead they have a small amount of gas in them. this is only true for larger ( or more delacite ones), and is the main operation which we are measuring to find the anode connections.
 
-from our research, there are two main types of VFDs. the first type is what we call "E" type. these are VFDs that generate the segment magnetic field with an electromagnet, and therefore require a current across it to work.
+## how to tell if you have a leakage current
+the best way to tell if it has a leakage current is by the datasheet. if it has **both** a current draw on the segment and grid, you have a leakage. 
 
-The other type is "F" type. these seem to use FET technology to generate the magnetic field for the segments. this creates a bit of a problem in how we sense grid/segment combonations, and so you cant tell if there is one or not. for that reason, it's impossible to automate "F" type VFDs with our method.
+the next best way to tell is by the size of the VFD. smaller VFDs tend to be pure vacumns, and dont have a leakage current. if it is a larger (or older) VFD like those found in audio amplifiers, car radios ect, it most likely has a leakage current.
 
-## how to tell which type you have
-the best way's to tell which type it is are with age and size. most early and high end VFDs are E-type, while cheaper ones tend to be F-type. if its designed for small systems, and wont be that birght you are looking at an F-type, whereas audio amp and car VFDs tend to be E-type.
-
-if you are still unsure, connect up an ammeter across the grid/segment pins and measure the current. if you notice an increase when a segment lights up, its an E-type. if there is no increase, its a F-type.
+the third and final way to tell is to manually check. if there is a leakage current, **there will be a small current increase when a valid grid/segment combination is found**. this is by far the best way to tell, however can be quite finnicky and so we reccomend the other ways first.
 
 
 # how this works
- it detects an increase in current across different pins, and will make a logic table accordingly.
+ it detects a leakage in current across different pins, and will make an anode connection table accordingly.
   this is still in development so it might take a while to get up and running.
 
 # setup process and PCB information
@@ -24,8 +23,7 @@ the PCB is designed to be cascaded for extra modules to fit your VFD size. each 
 ## setup information
 the two values you will need to change  are:
 - PINCOUNT
-- CHUNKSIZE
-PINCOUNT isthe number of pin slots used, going from the top right of the image down. CHUNKSIZE is the maximum number of segments it will test at once. for safety this is set to 1, but can be set higher for greater speed.
+PINCOUNT is the number of shift registers used, starting from the main module and cascading to the right. we need to know this so we can properly push the right bits.
 
 compile this code to your arduino, and have it plugged in to accept serial out. the arduino will print your matrix to the serial out, so its kinda important.
 

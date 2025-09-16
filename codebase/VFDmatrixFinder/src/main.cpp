@@ -8,18 +8,19 @@
 
 
 //base pin globals
-bool AC_OR_DC = true;     // true = AC, false = DC
-const int NO_OF_PINS = 8; // set this to the number of pins from the top right down
-const uint8_t DATA_PIN = 12;   // pin connected to the data pin of the shift register
-const uint8_t STROBE_PIN = 11; // pin connected to the strobe pin of the shift register
-const uint8_t CLOCK_PIN = 13;  // pin connected to the clock pin of the shift register
+bool AC_OR_DC = true; 
+const unsigned uint8_t VFD_SIZE=1    // true = AC, false = DC
+const unsigned uint8_t NO_OF_PINS = 8*VFD_SIZE; // set this to the number of pins from the top right down
+const unsigned uint8_t DATA_PIN = 12;   // pin connected to the data pin of the shift register
+const unsigned uint8_t STROBE_PIN = 11; // pin connected to the strobe pin of the shift register
+const unsigned uint8_t CLOCK_PIN = 13;  // pin connected to the clock pin of the shift register
 const uint8_t HCSIN = A0;
 const uint8_t HCSEN = A1;
 const uint8_t LCSIN = A2;
 const uint8_t LCSEN = A3;
 //these two cannot be changed, if you do you have to modify the acGeneratorVFD library
-const uint8_t ACPINONE = 6; // pin connected to the ac generator one side
-const uint8_t ACPINTWO = 5; // pin connected to the ac generator other side
+const unsigned uint8_t ACPINONE = 6; // pin connected to the ac generator one side
+const unsigned uint8_t ACPINTWO = 5; // pin connected to the ac generator other side
 
 
 // base values for the grid/segments
@@ -31,7 +32,7 @@ long DELAY = 500; // delay time between updates
 size_t noOfGrids = 0;
 size_t noOfSegments = 0;
 // the various lists used in making the thing
-uint8_t outputList[NO_OF_PINS] = {0};
+uint8_t OutputList[NO_OF_PINS] = {0};
 uint8_t finalList[][NO_OF_PINS] = {0};
 // 0/1 = binary output, 2 = grid, 3 = no connection
 
@@ -63,12 +64,12 @@ void convertMatrix()
     bool temp = false;
     for (size_t j = 0; j < NO_OF_PINS; j++)
     {
-      if (temp == false && outputList[j] == 2)
+      if (temp == false && OutputList[j] == 2)
       {
         temp = true;
         finalList[i][j] = 2;
       }
-      else if (temp == true && outputList[j] == 2)
+      else if (temp == true && OutputList[j] == 2)
       {
         finalList[i][j] = 3;
       }
@@ -99,7 +100,7 @@ void findGrids()
         // if the reading is not 0, then it is a grid
         if (reading > 0)
         {
-          outputList[i] = 2;
+          OutputList[i] = 2;
           BASE_GRID += reading;
           noOfGrids++;
           Serial.print("found grid at pin " + String(i) + " , reading = " + String(reading) + "\n");
@@ -192,6 +193,22 @@ void displayMatrix()
       finalList[i][j] = 0;
       j++;
     }
+  }
+}
+
+void removeDupes(){
+  // removes the duplicate pins if they occur.
+  // not strickly neccassary, but brought up by jose Luis Montenero that it could occur
+  for(size_t i; sizeof(OutputList); i++) {
+    for(size_t j; sizeof(i);j++) {
+      if(i[j] <2) { i[j] ==1;}
+    }
+    for(size_t k; sizeof(i)) {
+
+    }
+    
+//needs to be completed
+
   }
 }
 
