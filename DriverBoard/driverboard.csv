@@ -6,7 +6,7 @@
 "C6,C7","2","10n","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","1","UC","","0.20"
 "C9","1","330p","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","1","UC","","0.20"
 "D1","1","SB240L","Diode_THT:D_DO-15_P3.81mm_Vertical_KathodeUp","1","UC","SB240L","0.80"
-"D2","1","SMF5V0A","Diode_SMD:D_SMF","1","4878-SMF5.0ACT-ND","SMF5.0A","0.54050"
+"D2","1","SMF5V0A","Diode_SMD:D_SMF","1","4878-SMF5.0ACT-ND","SMF5.0A","0.51750"
 "F1","1","100mA hold","Fuse:Fuse_Littelfuse_395Series","1","UC","TRF250-120","1.20"
 "J1","1","USB_C_Receptacle_USB2.0_14P","Connector_USB:USB_C_Receptacle_GCT_USB4125-xx-x-0190_6P_TopMnt_Horizontal","1","2223-UJC-H-G-SMT-P6-TRCT-ND","UJC-H-G-SMT-P6-TR","0.85100"
 "J2","1","Conn_01x02_Pin","Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","1","UC","","0.00"
