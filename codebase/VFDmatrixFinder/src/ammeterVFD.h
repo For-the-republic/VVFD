@@ -12,8 +12,6 @@ public:
     void toHCS();
     float readCurrent();
 
-
-
     private:
     uint8_t _hcsIN;
     uint8_t _hcsEN;

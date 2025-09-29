@@ -2,44 +2,42 @@
 #include <SPI.h>
 #include <Wire.h>
 #include "acGeneratorVFD.h"
-#include "shiftRegVFD.h"
+#include "shiftregVFD.h"
 #include "ammeterVFD.h"
 #include "stdint.h"
 
-
+#define VFD_SIZE 7
 //base pin globals
 bool AC_OR_DC = true; 
-const unsigned uint8_t VFD_SIZE=1    // true = AC, false = DC
 const unsigned uint8_t NO_OF_PINS = 8*VFD_SIZE; // set this to the number of pins from the top right down
-const unsigned uint8_t DATA_PIN = 12;   // pin connected to the data pin of the shift register
-const unsigned uint8_t STROBE_PIN = 11; // pin connected to the strobe pin of the shift register
-const unsigned uint8_t CLOCK_PIN = 13;  // pin connected to the clock pin of the shift register
+#define DATA_PIN = 12;   // pin connected to the data pin of the shift register
+#define STROBE_PIN = 11; // pin connected to the strobe pin of the shift register
+#define CLOCK_PIN = 13;  // pin connected to the clock pin of the shift register
 const uint8_t HCSIN = A0;
 const uint8_t HCSEN = A1;
 const uint8_t LCSIN = A2;
 const uint8_t LCSEN = A3;
 //these two cannot be changed, if you do you have to modify the acGeneratorVFD library
 const unsigned uint8_t ACPINONE = 6; // pin connected to the ac generator one side
-const unsigned uint8_t ACPINTWO = 5; // pin connected to the ac generator other side
 
 
 // base values for the grid/segments
-float BASE_SEGMENT = NULL;
-float BASE_GRID = NULL;
-long DELAY = 500; // delay time between updates
+static float BASE_SEGMENT = NULL;
+static float BASE_GRID = NULL;
+static long DELAY = 500; // delay time between updates
 
 // globals for the total numbers found
-size_t noOfGrids = 0;
-size_t noOfSegments = 0;
+static size_t noOfGrids = 0;
+static size_t noOfSegments = 0;
 // the various lists used in making the thing
-uint8_t OutputList[NO_OF_PINS] = {0};
-uint8_t finalList[][NO_OF_PINS] = {0};
+static uint8_t OutputList[NO_OF_PINS] = {0};
+static uint8_t finalList[][NO_OF_PINS] = {0};
 // 0/1 = binary output, 2 = grid, 3 = no connection
 
 // timings for the custom bits
-long currentMillis;
-unsigned long ammeterTiming;
-unsigned long gridTiming;
+static long currentMillis;
+static unsigned long ammeterTiming;
+static unsigned long gridTiming;
 // the custom parts
 AmmeterVFD ammeter;
 shiftRegVFD shiftReg;
@@ -174,7 +172,7 @@ void displayMatrix()
   {
     // checks to make sure theres no overwrite of pins sice we dont know if its a grid or not
 
-    if (finalList[i][j] != 0 && finalList[i][j] != 1)
+    if (finalList[i][j] != 0 && finalList[i][j] != 1 && timing(gridTiming, DELAY))
     {
       if (j >= NO_OF_PINS - 1)
       {
@@ -196,26 +194,10 @@ void displayMatrix()
   }
 }
 
-void removeDupes(){
-  // removes the duplicate pins if they occur.
-  // not strickly neccassary, but brought up by jose Luis Montenero that it could occur
-  for(size_t i; sizeof(OutputList); i++) {
-    for(size_t j; sizeof(i);j++) {
-      if(i[j] <2) { i[j] ==1;}
-    }
-    for(size_t k; sizeof(i)) {
-
-    }
-    
-//needs to be completed
-
-  }
-}
-
 void setup()
 {
   currentMillis = 0;
-  acGen.begin(ACPINONE, ACPINTWO, AC_OR_DC);
+  acGen.begin(ACPINONE, AC_OR_DC);
   ammeter.begin(HCSIN, HCSEN, LCSIN, LCSEN);
   ammeter.toHCS();
   shiftReg.begin(DATA_PIN, STROBE_PIN, CLOCK_PIN, NO_OF_PINS);
@@ -226,18 +208,18 @@ void setup()
 void loop()
 {
 
-  // findGrids();
-  // finalList[noOfGrids][NO_OF_PINS] = {0};
-  // convertMatrix();
-  // findSegments();
-  // for(size_t i = 0; i < noOfGrids; i++){
-  //   for(size_t j = 0; j < NO_OF_PINS; j++) {
-  //     Serial.print(finalList[i][j]);
-  //     Serial.print(" ");
-  //   }
-  //   Serial.println();
-  // }
-  // displayMatrix();
+  findGrids();
+  finalList[noOfGrids][NO_OF_PINS] = {0};
+  convertMatrix();
+  findSegments();
+  for(size_t i = 0; i < noOfGrids; i++){
+    for(size_t j = 0; j < NO_OF_PINS; j++) {
+      Serial.print(finalList[i][j]);
+      Serial.print(" ");
+    }
+    Serial.println();
+  }
+  displayMatrix();
 }
 
 // put function definitions here:

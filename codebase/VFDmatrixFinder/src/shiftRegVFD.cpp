@@ -31,7 +31,6 @@ void shiftRegVFD::outputList(uint8_t data[])
         // checks if the value is 1, OR if its a currently selected grid. else set to zero
         if (data[i] == 1 || data[i] == 2)
         {
-
             temp[i] = 1;
         }
         else
