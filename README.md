@@ -28,7 +28,7 @@ PINCOUNT is the number of shift registers used, starting from the main module an
 compile this code to your arduino, and have it plugged in to accept serial out. the arduino will print your matrix to the serial out, so its kinda important.
 
 to set the base conditions, the the arduino runs it will go into setup mode for one minute. this gives you time to ajust the variable resistors, and make sure everything is working. **DO NOT CHANGE THE RESISTORS AFTER ONE MINUTE**, or else the ammeters wont have a base value to test off of.
-![pic](/Electronics/PCBPic.png)
+![pic](/DriverBoard/PCBPic.png)
 
 once this mode is done, just leave it. 
 ## when it has finished
