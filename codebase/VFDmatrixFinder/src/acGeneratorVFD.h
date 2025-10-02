@@ -10,7 +10,7 @@ class acGeneratorVFD {
     public:
 
     acGeneratorVFD();
-    void begin(uint8_t acPin1, uint8_t acPin2, bool state);
+    void begin(uint8_t acPin1, bool state);
 
     private:
     uint8_t _acPin1;

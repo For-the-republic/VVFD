@@ -3,6 +3,7 @@
 #include "Arduino.h"
 #include <SPI.h>
 #include <Wire.h>
+#include <stdint.h>
 //where you output the list to the shift register
 
 // """TODO:
@@ -16,11 +17,16 @@ class shiftRegVFD {
 
     shiftRegVFD();
     void begin(uint8_t dataPin, uint8_t strobePin, uint8_t clockPin, size_t NO_OF_PINS);
-    void outputList(uint8_t list[]);
+        // directly outputs the information to the shift register, works with standard formatting
+    void outputList(uint8_t* matrix, size_t length);
+        //sets up an internal matrix to simplify code in main
     void setMatrix(uint8_t *matrix, size_t row, size_t NO_OF_PINS);
+        // updates a single row of the internal matrix
     void updateMatrix(uint8_t matrix[], size_t row);
+     // sets the internal matrix to the new matrix delinking the input from the output so that you can pass in an image without it ovveriding the segment/grid pins
     void setDisplay(uint8_t matrix[], size_t row);
-    void outputMatrix(int row);
+      // outputs the internal matrix to the shift register OF THE GIVEN GRID
+    void outputMatrix(uint8_t row);
     uint8_t convertToGrid( uint8_t list[]);
 
     
@@ -28,7 +34,10 @@ class shiftRegVFD {
     uint8_t _dataPin;
     uint8_t _strobePin;
     uint8_t _clockPin;
-    uint8_t _internalMatrix[0][0];
+
+    size_t _NO_OF_PINS;
+    size_t _NO_OF_GRIDS;
+    uint8_t **_internalMatrix;
 
 };
 #endif
