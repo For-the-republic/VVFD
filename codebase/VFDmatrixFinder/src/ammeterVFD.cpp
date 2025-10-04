@@ -15,12 +15,15 @@ void AmmeterVFD::begin(int hcsIN, int hcsEN, int lcsIN, int lcsEN) {
     _hcsEN = hcsEN;
     _lcsIN = lcsIN;
     _lcsEN = lcsEN;
+    _LCSIN2 = lcsIN + 1; //the second low current sensor is always the next pin
+    _HCSIN2 = hcsIN + 1; //the second high current sensor is always the next pin
 
     pinMode(_hcsEN, OUTPUT);
     pinMode(_lcsEN, OUTPUT);
     pinMode(_hcsIN, INPUT);
     pinMode(_lcsIN, INPUT);
-
+    pinMode(_HCSIN2, INPUT); //setup the second high current pin
+    pinMode(_LCSIN2, INPUT); //setup the second low current
     digitalWrite(_hcsEN, HIGH); //disable high current sensor
     digitalWrite(_lcsEN, LOW); //enable low current sensor
 }

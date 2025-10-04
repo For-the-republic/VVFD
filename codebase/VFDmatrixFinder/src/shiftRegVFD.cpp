@@ -11,6 +11,15 @@ shiftRegVFD::shiftRegVFD()
     _clockPin = 0;
     _NO_OF_PINS = 0;
     _NO_OF_GRIDS = 0;
+    _internalMatrix = nullptr;
+}
+shiftRegVFD::~shiftRegVFD()
+{
+    if (_internalMatrix)
+    {
+        delete[] _internalMatrix;
+        _internalMatrix = nullptr;
+    }
 }
 void shiftRegVFD::begin(uint8_t dataPin, uint8_t strobePin, uint8_t clockPin, size_t pinCount)
 {
@@ -22,111 +31,82 @@ void shiftRegVFD::begin(uint8_t dataPin, uint8_t strobePin, uint8_t clockPin, si
     pinMode(_clockPin, OUTPUT);
     pinMode(_strobePin, OUTPUT);
 
-
     SPI.begin();
 }
-void shiftRegVFD::outputList(uint8_t* data, size_t length)
+void shiftRegVFD::outputList(uint8_t *data, size_t length)
 {
     // directly outputs the information to the shift register, works with standard formatting
-    uint8_t* temp = new uint8_t[length];
-    for (size_t i = 0; i < length; i++)
-    {
-        // checks if the value is 1, OR if its a currently selected grid. else set to zero
-        if ((data[i]) == 1 || data[i] == 2)
-        {
-            temp[i] = 1;
-        }
-        else
-        {
-            temp[i] = 0;
-        }
-    }
-        size_t numBytes = length / 8; // the length will always be equal to the number of shift registers
-    uint8_t buffer[numBytes];            // Packed bytes
-
-    // Initialize buffer
-    for (size_t i = 0; i < numBytes; i++) {
-        buffer[i] = 0;
-    }
-
-    // Pack bits into buffer
-    for (size_t i = 0; i < length; i++) {
-        size_t byteIndex = i / 8;
-        size_t bitIndex = 7 - (i % 8); // MSB first
-        if (temp[i]) {
-            buffer[byteIndex] |= (1 << bitIndex);
-        }
-    }
+     // Break rowData into bytes (LSB first)
     SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
-    for (size_t i = 0; i < numBytes; i++) {
-
-        SPI.transfer(buffer[i]);
+    digitalWrite(_strobePin, LOW); // Begin transmission
+    for(size_t i =0; i<length; i++){
+        SPI.transfer(data[i]);
     }
-    digitalWrite(_strobePin, HIGH);
-    delay(1);
-    digitalWrite(_strobePin, LOW);
-    
+    delayMicroseconds(500);
+    digitalWrite(_strobePin, HIGH); // End transmission
     SPI.endTransaction();
-    delete[] temp;
+    
+    // Now send buffer over SPI
+
 }
 
-void shiftRegVFD::setMatrix(uint8_t *pointer, size_t row, size_t col)
-{
-    _NO_OF_GRIDS = row;
-    _NO_OF_PINS  = col;
 
-    // Free old matrix if needed
-    if (_internalMatrix) {
-        for (size_t i = 0; i < _NO_OF_GRIDS; i++) {
-            delete[] _internalMatrix[i];
-        }
+void shiftRegVFD::setMatrix(uint64_t *pointer, size_t rows)
+{
+    // Free old
+    if (_internalMatrix)
+    {
         delete[] _internalMatrix;
     }
 
-    // Allocate new matrix
-    _internalMatrix = new uint8_t*[row];
-    for (size_t i = 0; i < row; i++) {
-        _internalMatrix[i] = new uint8_t[col];
-    }
+    _NO_OF_GRIDS = rows;
 
-    // Fill values from pointer
-    for (size_t i = 0; i < row; i++) {
-        for (size_t j = 0; j < col; j++) {
-            _internalMatrix[i][j] = pointer[i * col + j];
-        }
-    }
-    
-}
-void shiftRegVFD::updateMatrix(uint8_t *matrix, size_t row)
-{
-    if (row >= _NO_OF_GRIDS) return; // prevent out-of-bounds
+    // Allocate new
+    _internalMatrix = new uint64_t[rows];
 
-    for (size_t i = 0; i < _NO_OF_PINS; i++)
+    // Copy values
+    for (size_t i = 0; i < rows; i++)
     {
-        // Only update displayable elements (<2)
-        if (_internalMatrix[row][i] < 2)
-        {
-            _internalMatrix[row][i] = matrix[i];
-        }
+        _internalMatrix[i] = pointer[i];
     }
+}
+
+void shiftRegVFD::updateMatrix(uint64_t matrix, size_t row)
+{
+    if (row >= _NO_OF_GRIDS)
+        return; // prevent out-of-bounds
+
+    _internalMatrix[row] = matrix;
 }
 
 // --- setDisplay: overwrite one row safely ---
-void shiftRegVFD::setDisplay(uint8_t *matrix, size_t row)
+void shiftRegVFD::setDisplay(uint64_t value, size_t row)
 {
-    if (row >= _NO_OF_GRIDS) return; // prevent out-of-bounds
+    if (row >= _NO_OF_GRIDS) return;
 
-    for (size_t i = 0; i < _NO_OF_PINS; i++)
-    {
-        // Only update displayable elements (<2)
-        if (_internalMatrix[row][i] < 2)
-        {
-            _internalMatrix[row][i] = matrix[i];
-        }
-    }
+    _internalMatrix[row] = value;
 }
-void shiftRegVFD::outputMatrix(uint8_t row)    // outputs the internal matrix to the shift register
-
+void shiftRegVFD::outputMatrix(uint64_t row)
 {
-    outputList((_internalMatrix[row]), _NO_OF_PINS);
+    if (row >= _NO_OF_GRIDS) return;
+
+    uint64_t rowData = _internalMatrix[row];
+
+    // Break rowData into bytes (LSB first)
+    size_t numBytes = (_NO_OF_PINS) / 8;
+    uint8_t buffer[numBytes];
+
+    for (size_t i = 0; i < numBytes; i++)
+    {
+        buffer[i] = (rowData >> (i * 8)) & 0xFF;
+    }
+
+    // Now send buffer over SPI
+    outputList(buffer, numBytes);
+}
+uint8_t shiftRegVFD::returnRow( size_t row){
+    if (row >= _NO_OF_GRIDS) return 0;
+
+    uint64_t rowData = _internalMatrix[row];
+    return (uint8_t)(rowData & 0xFF);
 }
