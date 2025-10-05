@@ -32,19 +32,19 @@ void shiftRegVFD::begin(uint8_t dataPin, uint8_t strobePin, uint8_t clockPin, si
     pinMode(_strobePin, OUTPUT);
 
     SPI.begin();
+    SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE0));
+
 }
 void shiftRegVFD::outputList(uint8_t *data, size_t length)
 {
     // directly outputs the information to the shift register, works with standard formatting
      // Break rowData into bytes (LSB first)
-    SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
     digitalWrite(_strobePin, LOW); // Begin transmission
     for(size_t i =0; i<length; i++){
         SPI.transfer(data[i]);
     }
-    delayMicroseconds(500);
+    delayMicroseconds(175);
     digitalWrite(_strobePin, HIGH); // End transmission
-    SPI.endTransaction();
     
     // Now send buffer over SPI
 
