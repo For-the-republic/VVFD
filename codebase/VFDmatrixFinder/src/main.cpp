@@ -1,226 +1,3 @@
-// #include <Arduino.h>
-// #include <SPI.h>
-// #include <Wire.h>
-// #include "shiftregVFD.h"
-// #include "ammeterVFD.h"
-// #include <stdint.h>
-
-// const uint8_t  VFD_SIZE =7;
-// const uint8_t  DATA_PIN =12;  // pin connected to the data pin of the shift register
-// const uint8_t  STROBE_PIN =11; // pin connected to the strobe pin of the shift register
-// const uint8_t  CLOCK_PIN =13;  // pin connected to the clock pin of the shift register
-// //base pin globals
-// bool AC_OR_DC = true; 
-// const uint8_t NO_OF_PINS = 8*VFD_SIZE; // set this to the number of pins from the top right down
-// const uint8_t HCSIN = A0;
-// const uint8_t HCSEN = A1;
-// const uint8_t LCSIN = A2;
-// const uint8_t LCSEN = A3;
-// //these two cannot be changed, if you do you have to modify the acGeneratorVFD library
-
-
-// // base values for the grid/segments
-// static float BASE_SEGMENT = NULL;
-// static float BASE_GRID = NULL;
-// static long DELAY = 500; // delay time between updates
-
-// // globals for the total numbers found
-// static size_t noOfGrids = 0;
-// static size_t noOfSegments = 0;
-// // the various lists used in making the thing
-// static uint8_t OutputList[NO_OF_PINS] = {0};
-// static uint8_t finalList[][NO_OF_PINS] = {0};
-// // 0/1 = binary output, 2 = grid, 3 = no connection
-
-// // timings for the custom bits
-// static long currentMillis;
-// static unsigned long ammeterTiming;
-// static unsigned long gridTiming;
-// // the custom parts
-// AmmeterVFD ammeter;
-// shiftRegVFD shiftReg;
-
-// // put function declarations here:le
-// bool timing(unsigned long &timing, long &DELAY)
-// {
-//   // if the Led is off, we must wait for the interval to expire before turning it on
-//   if ((currentMillis - timing) >= (DELAY))
-//   {
-//     DELAY += (timing);
-//     return true;
-//   }
-//   return false;
-// }
-// void convertMatrix()
-// {
-//   // converts a single array into a matrix of all the grid combos
-//   for (size_t i = 0; i < noOfGrids; i++)
-//   {
-//     bool temp = false;
-//     for (size_t j = 0; j < NO_OF_PINS; j++)
-//     {
-//       if (temp == false && OutputList[j] == 2)
-//       {
-//         temp = true;
-//         finalList[i][j] = 2;
-//       }
-//       else if (temp == true && OutputList[j] == 2)
-//       {
-//         finalList[i][j] = 3;
-//       }
-//     }
-//   }
-// }
-
-// void findGrids()
-// {
-//   // the first step of the process, finds all valid grids so the segments can be found
-//   uint8_t gridList[NO_OF_PINS] = {0};
-//   gridList[0] = 1;
-//   size_t i = 1;
-//   float reading = 0;
-//   shiftReg.outputList(gridList);
-//   ammeter.toLCS();
-//   // loops over all pins
-//   while (true)
-//   {
-//     // checks if enough time has passed to stabilise the reading
-//     currentMillis = millis();
-//     if (timing(gridTiming, DELAY))
-//     {
-//       // if it has, make sure i has not gone oveer
-//       if (i < NO_OF_PINS)
-//       {
-//         reading = ammeter.readCurrent();
-//         // if the reading is not 0, then it is a grid
-//         if (reading > 0)
-//         {
-//           OutputList[i] = 2;
-//           BASE_GRID += reading;
-//           noOfGrids++;
-//           Serial.print("found grid at pin " + String(i) + " , reading = " + String(reading) + "\n");
-//         }
-//         // move onto the next pin
-//         i++;
-//         gridList[i] = 1;
-//         gridList[i - 1] = 0;
-//         shiftReg.outputList(gridList);
-//       }
-//       else
-//       {
-//         break;
-//       }
-//     }
-//   }
-//   BASE_GRID = BASE_GRID / noOfGrids;
-// }
-// void findSegments()
-// {
-
-//   // first
-//   for (size_t i; i < NO_OF_PINS; i++)
-//   {
-//     size_t j = 0;
-//     while (j < NO_OF_PINS)
-//     {
-//       // checks to make sure theres no overwrite of pins sice we dont know if its a grid or not
-//       if (finalList[i][j] != 0 && finalList[i][j] != 1)
-//       {
-//         j++;
-//       }
-//       else
-//       {
-
-//         finalList[i][j] = 1;
-//         shiftReg.outputList(finalList[i]);
-//       }
-//       // then start reading the ammeter to see if theres a connection
-//       currentMillis = millis();
-//       if (timing(gridTiming, DELAY))
-//       {
-//         float reading = ammeter.readCurrent();
-
-//         if (reading == BASE_GRID)
-//         {
-//           finalList[i][j] = 3; // no connection here
-//         }
-//         else
-//         {
-//           finalList[i][j] = 0; // is a connection, set to zero and find the next pin
-
-//           BASE_SEGMENT += reading - BASE_GRID;
-//           noOfSegments++;
-//           Serial.print("found segment at grid " + String(i) + " pin " + String(j) + " , reading = " + String(reading) + "\n");
-//           j++;
-//         }
-//       }
-//     }
-//   }
-//   BASE_SEGMENT = BASE_SEGMENT / noOfSegments;
-// }
-
-// void displayMatrix()
-// {
-//   // almost there, now showing that all pin combos the system has found
-//   size_t i = 0;
-//   size_t j = 0;
-
-//   while (true)
-//   {
-//     // checks to make sure theres no overwrite of pins sice we dont know if its a grid or not
-
-//     if (finalList[i][j] != 0 && finalList[i][j] != 1 && timing(gridTiming, DELAY))
-//     {
-//       if (j >= NO_OF_PINS - 1)
-//       {
-//         j = 0;
-//         i++;
-//       }
-//       j++;
-//     }
-//     else
-//       finalList[i][j] = 1;
-//     shiftReg.outputList(finalList[i]);
-//     // then start reading the ammeter to see if theres a connection
-//     currentMillis = millis();
-//     if (timing(gridTiming, DELAY))
-//     {
-//       finalList[i][j] = 0;
-//       j++;
-//     }
-//   }
-// }
-
-// void setup()
-// {
-//   currentMillis = 0;
-//   ammeter.begin(HCSIN, HCSEN, LCSIN, LCSEN);
-//   ammeter.toHCS();
-//   shiftReg.begin(DATA_PIN, STROBE_PIN, CLOCK_PIN, NO_OF_PINS);
-//   Serial.begin(9600);
-//   Serial.print("setup complete, going into base condition mode");
-// }
-
-// void loop()
-// {
-
-//   findGrids();
-//   finalList[noOfGrids][NO_OF_PINS] = {0};
-//   convertMatrix();
-//   findSegments();
-//   for(size_t i = 0; i < noOfGrids; i++){
-//     for(size_t j = 0; j < NO_OF_PINS; j++) {
-//       Serial.print(finalList[i][j]);
-//       Serial.print(" ");
-//     }
-//     Serial.println();
-//   }
-//   displayMatrix();
-// }
-
-// put function definitions here:
-
-
 
 #include <Arduino.h>
 #include <shiftRegVFD.h>
@@ -229,18 +6,17 @@
 #include <string.h>
 #include <SPI.h>
 #include "ammeterVFD.h"
-const uint8_t  DATA_PIN =11;  // pin connected to the data pin of the shift register
-const uint8_t  STROBE_PIN =10; // pin connected to the strobe pin of the shift register
-const uint8_t  CLK_PIN =13;  // pin connected to the clock pin of the shift register
+
+const uint8_t DATA_PIN = 11;   // pin connected to the data pin of the shift register
+const uint8_t STROBE_PIN = 10; // pin connected to the strobe pin of the shift register
+const uint8_t CLK_PIN = 13;    // pin connected to the clock pin of the shift register
 const int NO_OF_GIDS = 3;
-const int NO_OF_SEGS = 48;
-long DELAY = 500;
-long currentMillis = 0;
-//this sets the locations of which grids you are updating
+const int NO_OF_SEGS = 56;
+const long DELAY = 500;
+// this sets the locations of which grids you are updating
 const int GRID1 = 0;
 const int GRID2 = 1;
 const int GRID3 = 2;
-  static bool firstRun = true;
 
 int k = 0;
 int j = 0;
@@ -249,134 +25,168 @@ String readString = "";
 AmmeterVFD ammeter = AmmeterVFD();
 
 shiftRegVFD display = shiftRegVFD();
-uint8_t thing[NO_OF_SEGS] = 
-{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
- 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
- 0, 0, 0, 0, 3, 2, 3, 4, 4, 4, 4, 4};
-uint8_t thing2 [NO_OF_SEGS] = 
-{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 
- 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
- 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
- 3, 3,3 , 3, 3, 2, 3, 3, 4, 4, 4, 4};
 
-static uint8_t matrix[NO_OF_GIDS][NO_OF_SEGS] = {
+// this is frame 231, roughly 7 seconds into the video "bad apple". it is used for testing to make sure the grid bit fiddling is done right
+String frame = "111111111101111111111111100001111111111100000011111111111000001111111111110000111111001110000111111110000000011111111100";
+// what this frame represents
+//   seg1 |  seg2 |  seg3 || serial Data
+//  ##### | ##### | .#### || ##########.####
+//  ##### | ####. | ...## || #########....##
+//  ##### | ###.. | ....# || ########......#
+//  ##### | ####. | ....# || #########.....#
+//  ##### | ##### | ....# || ##########....#
+//  ####. | .###. | ...## || ####..###....##
+//  ##### | ..... | ...## || #####........##
 
-{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 
- 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
- 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
- 3, 3,3 , 3, 3, 2, 3, 3, 4, 4, 4, 4},
- 
-{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
- 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
- 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
- 0, 0, 0, 0, 3, 3, 2, 4, 4, 4, 4, 4},
+uint64_t segList[NO_OF_SEGS] =
+    {
+        0, 0, 0, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 2, 3, 3,
+        3, 3, 3, 3, 3,
+        3, 3, 3, 3, 3,
+        3, 3, 3, 3, 4,
+        4};
 
-{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
- 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
- 0, 0, 0, 0, 2, 3, 3, 4, 4, 4, 4, 4}
-
-  };
-bool timing(unsigned long DELAY) {
-  static unsigned long lastTime = 0;  
+static uint64_t matrix[NO_OF_GIDS] = {
+    //    Digiets/Segments                           | Grids    |extras
+    // 0b1000110001111111000110001100010000000000000000000100000000000000,
+    0b1000000010000000100000001000000010000000100000001000000010000000,
+    0b0111000100001000010000100011100000000000000000000000000000000000,
+    0b1111111111111111111111111111111111111111000011100000001000000000};
+bool timing(unsigned long DELAY)
+{
+  static unsigned long lastTime = 0;
   unsigned long currentTime = millis();
 
-  if (currentTime - lastTime >= DELAY) {
-    lastTime = currentTime;
-    return true;  // Interval has passed
-  }
-  return false;  } // Interval not yet reached
-void displayImage(uint8_t* image)
-{
-    uint8_t display1[NO_OF_SEGS] = {0};
-    uint8_t display2[NO_OF_SEGS] = {0};
-    uint8_t display3[NO_OF_SEGS] = {0};
-      // since the display data comes in going down, we need to split it to go across
-    for(size_t i =0; i<16; i++){
-      for(size_t j =0, k=(i*8); j<56 && k<(16+8*i); j+=8, k++){
-          display1[j+i] = image[k];
-          display2[j+i] = image[k+40];
-          display3[j+i] = image[k+80];
-       }
-      }
-            //converts the bad apple image into the VFD matrix format
-    display.updateMatrix(display1, GRID1);
-    display.updateMatrix(display2, GRID2);
-    display.updateMatrix(display3, GRID3);
-    display.outputMatrix(0);
-    delay(3.32/3);
-    display.outputMatrix(1);
-    delay(3.32/3);
-    display.outputMatrix(2);
-    delay(3.32/3);
-  
-}
-void convertStringToU64(String str)
-{
-  for (unsigned int i = 0; i < str.length(); i++)
+  if (currentTime - lastTime >= DELAY)
   {
-    if(str[i] =='0'){
-      image[i] = 0;
-    } else {
-      image[i] = 1;
-    }
-  };
+    lastTime = currentTime;
+    return true; // Interval has passed
+  }
+  return false;
+} // Interval not yet reached
+
+void frameToDisplays(uint16_t *frame)
+{
+  size_t shiftAmount = 43;
+
+  // Clear old data
+  uint64_t displayData[NO_OF_GIDS] = {0};
+  // this is specifically NOT a loop to make it as fast as possible
+  displayData[0] = (((uint64_t)(frame[0] & 0xF800) << (shiftAmount)) |
+                    ((uint64_t)(frame[1] & 0xF800) << (shiftAmount - 5)) |
+                    ((uint64_t)(frame[2] & 0xF800) << (shiftAmount - 10)) |
+                    ((uint64_t)(frame[3] & 0xF800) << (shiftAmount - 15)) |
+                    ((uint64_t)(frame[4] & 0xF800) << (shiftAmount - 20)) |
+                    ((uint64_t)(frame[5] & 0xF800) << (shiftAmount - 25)) |
+                    ((uint64_t)(frame[6] & 0xE000) << (shiftAmount - 30)) |
+                    ((uint64_t)(frame[6] & 0x1800) << (shiftAmount -30)));
+
+  displayData[1] = (((uint64_t)(frame[0] & 0x07C0) << (shiftAmount + 5)) |
+                    ((uint64_t)(frame[1] & 0x07C0) << (shiftAmount)) |
+                    ((uint64_t)(frame[2] & 0x07C0) << (shiftAmount - 5)) |
+                    ((uint64_t)(frame[3] & 0x07C0) << (shiftAmount - 10)) |
+                    ((uint64_t)(frame[4] & 0x07C0) << (shiftAmount - 15)) |
+                    ((uint64_t)(frame[5] & 0x07C0) << (shiftAmount - 20)) |
+                    ((uint64_t)(frame[6] & 0x07C0) << (shiftAmount - 25)) |
+                    ((uint64_t)(frame[6] & 0x00C0) << (shiftAmount - 25)));
+
+  displayData[2] = (((uint64_t)(frame[0] & 0x003E) << (shiftAmount + 10)) |
+                    ((uint64_t)(frame[1] & 0x003E) << (shiftAmount + 5)) |
+                    ((uint64_t)(frame[2] & 0x003E) << (shiftAmount)) |
+                    ((uint64_t)(frame[3] & 0x003E) << (shiftAmount - 5)) |
+                    ((uint64_t)(frame[4] & 0x003E) << (shiftAmount - 10)) |
+                    ((uint64_t)(frame[5] & 0x003E) << (shiftAmount - 15)) |
+                    ((uint64_t)(frame[6] & 0x0038) << (shiftAmount - 20)) |
+                    ((uint64_t)(frame[6] & 0x0006) << (shiftAmount - 20)));
+
+  // bit masks over the grids to stop too much current being drawn
+  // displayData[0] = (displayData[0]<<15 & 0b1111111111111111111111111111111111111111000011100000000000000000);
+  // displayData[1] = (displayData[1]<<15 & 0b1111111111111111111111111111111111111111000011100000000000000000);
+  // displayData[2] = (displayData[2]<<15 & 0b1111111111111111111111111111111111111111000011100000000000000000);
+  // // now mask back over
+  // add in the grids on the end
+  displayData[0] = (displayData[0] | 0b0000000000000000000000000000000000000000000000000100000000000000);
+  displayData[1] = (displayData[1] | 0b0000000000000000000000000000000000000000000000000010000000000000);
+  displayData[2] = (displayData[2] | 0b0000000000000000000000000000000000000000000000000000001000000000);
+
+  // now output the data and update the matrix. this is done after in case one bitmask takes slightly longer than the other
+  
+  // Serial.print(char(displayData[2]),BIN);
+
+  display.updateMatrix(displayData[0], 0);
+  display.updateMatrix(displayData[1], 1);
+  display.updateMatrix(displayData[2], 2);
+  display.outputMatrix(0);
+  display.outputMatrix(1);
+  display.outputMatrix(2);
 }
 
+uint16_t *convertStringToU64(String str)
+{
+
+  // with this method you dont have to worry about zeroes, and you just grab what you need
+  static uint16_t val[7] = {
+      (uint16_t)strtoul(str.substring(0, 16).c_str(), nullptr, 2),
+      (uint16_t)strtoul(str.substring(16, 32).c_str(), nullptr, 2),
+      (uint16_t)strtoul(str.substring(32, 48).c_str(), nullptr, 2),
+      (uint16_t)strtoul(str.substring(48, 64).c_str(), nullptr, 2),
+      (uint16_t)strtoul(str.substring(64, 96).c_str(), nullptr, 2),
+      (uint16_t)strtoul(str.substring(96, 112).c_str(), nullptr, 2)};
+  
+
+for (size_t i = 0; i < 7; i++) {
+  int start = i * 16;
+  int end = start + 16;
+  val[i] = (uint16_t)strtoul(str.substring(start, end).c_str(), nullptr, 2);
+}
+return val;
+
+}
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(115200);
   display.begin(DATA_PIN, STROBE_PIN, CLK_PIN, NO_OF_SEGS);
-  ammeter.begin(A0, A1, A2, A3);
+  ammeter.begin(A0, 4, A2, 5);
   ammeter.toHCS();
 
-  display.setMatrix(*matrix, NO_OF_GIDS,NO_OF_SEGS);
-  Serial.print("setup complete, going into base condition mode");
-  // display.updateMatrix(thing,0);
-
-
+  display.setMatrix(matrix, NO_OF_GIDS);
+  display.outputMatrix(0);
+  frameToDisplays(convertStringToU64(frame));
 }
 
 void loop()
 {
 
-  display.outputMatrix(0);
+  while (Serial.available())
+  {
+  
 
+    char c = Serial.read();
+    Serial.print(c);
+    if (c != '\n') {
+      readString += c;
+}
+    else if (c == '\n')
+    {
+      frameToDisplays(convertStringToU64(readString));
+      
+      readString = "";
 
-  display.outputMatrix(1);
+    }
+  } 
+    display.outputMatrix(0);
+    display.outputMatrix(1);
+    display.outputMatrix(2);
 
+  
+    
 
-  display.outputMatrix(2);
-  if (timing(DELAY)) {
-    if (firstRun) {
-      display.updateMatrix(thing2 ,0);
-      firstRun = false;
-          Serial.println(firstRun);
-
-    }else {
-      display.updateMatrix(thing ,0);
-      firstRun = true;
-    Serial.println(firstRun);
-
-      }
   }
 
-
-  // while (Serial.available())
-  // {
-  //   char c = Serial.read();
-  //   Serial.print(c);
-  //   if (c != '\n')
-  //     readString += c;
-  //   else
-  //   {
-  //     Serial.print(readString + "|");
-  //     convertStringToU64(readString);
-  //     displayImage((image));
-  //     readString = "";
-  //   }
-
-  // }
-
-}

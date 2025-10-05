@@ -17,6 +17,8 @@ public:
     uint8_t _hcsEN;
     uint8_t _lcsIN;
     uint8_t _lcsEN;
+    uint8_t _HCSIN2;
+    uint8_t _LCSIN2;
     float _current;
     float _prevCurrent;
     bool _mode;
