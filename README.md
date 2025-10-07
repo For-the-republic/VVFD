@@ -40,3 +40,5 @@ once it has completed making the pinout table, it will cycle through every valid
 - the AC generator pins must be both PWN pins
 - the ammeter pins must be analouge
 - all other pins should combos should be fine
+
+(https://youtu.be/ehEdY2yYjXk) [video of it working]
