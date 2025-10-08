@@ -50,13 +50,17 @@ void switch_pins(uint64_t pin_mask) {
 // Prints bytes in binary
 // The least significant bit will be printed on the left if print_backwards = true
 // Assumes the hardware uses lttle endian
-void serial_print_bin(void* bytes, size_t len, bool print_backwards) {
+void serial_print_bin(void* bytes, size_t len, bool print_backwards, bool pad_bytes) {
   for (uint8_t i = 0; i < len; i++) {
-
     uint8_t this_byte = ((uint8_t*)bytes)[_rev_index(i, len, print_backwards)];
 
     for (uint8_t j = 0; j < 8; j++) {
       Serial.print(bitRead(this_byte, _rev_index(j, 8, print_backwards)));
+
+    }
+
+    if (pad_bytes) {
+      Serial.print(" ");
     }
   }
 
@@ -64,7 +68,7 @@ void serial_print_bin(void* bytes, size_t len, bool print_backwards) {
 }
 
 // Prints identifier to make pin binary masks more user readable
-void serial_print_pin_id(bool reversed) {
+void serial_print_pin_id(bool reversed, bool pad_bytes) {
   char* start_msg;
   char* end_msg;
   if (!reversed) {
@@ -75,18 +79,23 @@ void serial_print_pin_id(bool reversed) {
     end_msg = ">";
   }
 
+  uint8_t len = DRIVER_PINS - 7;
+  if (pad_bytes) {
+    len += 7;
+  }
+
   Serial.print(start_msg);
-  for (uint8_t i = 0; i < DRIVER_PINS - 7; i++) {
+  for (uint8_t i = 0; i < len; i++) {
     Serial.print("-");
   }
   Serial.println(end_msg);
 }
 
 // Helper for printing associated grids / segments
-void serial_print_associated(uint8_t pin_no, char* id_s, char* msg, uint64_t pin_mask, bool reverse_bin) {
+void serial_print_associated(uint8_t pin_no, char* id_s, char* msg, uint64_t pin_mask, bool reverse_bin, bool pad_bytes) {
   char buffer[50];
   sprintf(buffer, "Pin: %d %s %s", pin_no, id_s, msg);
   Serial.println(buffer);
-  serial_print_bin(&pin_mask, sizeof(uint64_t), reverse_bin);
+  serial_print_bin(&pin_mask, sizeof(uint64_t), reverse_bin, pad_bytes);
   Serial.println();
 }

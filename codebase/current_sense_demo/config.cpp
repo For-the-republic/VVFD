@@ -7,9 +7,11 @@ void setup_pins_peripherals(void) {
     pinMode(CURRENT_SENSE_PINS[i], INPUT);
   }
 
+  pinMode(HCS_EN, OUTPUT);
   pinMode(LCS_EN, OUTPUT);
   pinMode(SHIFT_LATCH, OUTPUT);
-  digitalWrite(LCS_EN, HIGH);
+
+  digitalWrite(SENSE_EN, HIGH);
 
   delay(100);
   SPI.begin();
